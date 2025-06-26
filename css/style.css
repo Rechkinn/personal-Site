@@ -88,6 +88,27 @@ a {
   width: 100%;
 }
 @media (max-width: 768px) {
+  .header__list-item-a:hover::after {
+    width: 0;
+  }
+}
+@media (max-width: 768px) {
+  .header__list-item::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: inline-block;
+    height: 2px;
+    width: 0;
+    background-color: blue;
+    transition: all 400ms;
+  }
+}
+.header__list-item:hover::after {
+  width: 100%;
+}
+@media (max-width: 768px) {
   .header__list {
     opacity: 0;
     scale: 0;
@@ -137,7 +158,7 @@ a {
     opacity: 1.6;
     width: 100vw;
     height: 100vh;
-    background-color: red;
+    background-color: #7F90D7;
   }
 }
 
