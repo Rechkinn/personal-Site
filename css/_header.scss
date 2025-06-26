@@ -69,6 +69,7 @@
         }
 
         @include media-tablet-768 {
+            @include hidden();
             position: absolute;
             top: 45%;
             left: 50%;
@@ -82,10 +83,7 @@
 
     &__switch{
         @include media-tablet-768 {
-            position: absolute;
-            @include hidden()
-        }
-        @include media-tablet-768 {
+            @include hidden();
             position: absolute;
             top: 65%;
             left: 50%;
@@ -129,7 +127,7 @@
             position: absolute;
             top: 0;
             left: 0;
-            opacity: 0.6;
+            opacity: 1.6;
             width: 100vw;
             height: 100vh;
             background-color: red;

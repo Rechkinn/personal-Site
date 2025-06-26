@@ -19,6 +19,14 @@ $top-Difference: 35%;
     background-color: $color-button-transparent;
     border: $border-0;
 
+    &__span:first-child {
+        top: $top + $top-Difference;
+        
+    }
+    &__span:last-child {
+        top: $top - $top-Difference;
+    }
+
     &__span {
         content: '';
         position: absolute;
@@ -29,13 +37,23 @@ $top-Difference: 35%;
         height: $height-Span;
         background-color: $color-black;
         border-radius: $border-radius-20;
+        transition: all 300ms;
     }
 
-    &__span:first-child {
+    &__span_close-45:nth-child(2n) {
+        scale: 0;
+    }
+    &__span_close-45:first-child {
+        $top-Difference: 0%;
         top: $top + $top-Difference;
+        left: 0;
+        transform: rotate(45deg);
     }
-    &__span:last-child {
+    &__span_close-45:last-child {
+        $top-Difference: 0%;
         top: $top - $top-Difference;
+        left: 0;
+        transform: rotate(-45deg);
     }
-    
+
 }

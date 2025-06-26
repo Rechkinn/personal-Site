@@ -13,9 +13,13 @@
             let menu = document.querySelector('.header__list');
             let switchCustom = document.querySelector('.switch');
             modalWindow.classList.toggle('hidden');
-            menu.classList.toggle('hidden');
+            menu.classList.toggle('show');
             switchCustom.classList.toggle('show');
 
+            let arrSpan = document.querySelectorAll('.burger-menu__span');
+            arrSpan.forEach(span => {
+                span.classList.toggle('burger-menu__span_close-45')
+            });
 
         }
     </script>
@@ -30,7 +34,7 @@
                 </div>
                 <div class="header__buttons">
                     <nav class="header__menu">
-                        <ul class="header__list hidden">
+                        <ul class="header__list">
                             <li class="header__list-item">
                                 <a href="#" class="header__list-item-a">Статьи</a>
                             </li>
@@ -44,7 +48,7 @@
                     </nav>
                 </div>
                 <div class="header__switch-and-burger">
-                    <div class="header__switch switch ">
+                    <div class="header__switch switch">
                         <form action="" method="" class="switch__form">
                             <label for="theme" class="switch__label">
                                 <input type="checkbox" id="theme" class="switch__original">
