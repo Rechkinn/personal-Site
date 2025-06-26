@@ -1,0 +1,19 @@
+@import 'variables';
+
+$width-phone: 360px;
+$width-tablet-480: 480px;
+$width-tablet-768: 768px;
+$width-tablet-1024: 1024px; 
+// $width-desctop: 1280px; 
+
+@mixin media-tablet-768 {
+    @media (max-width: $width-tablet-768) {
+        @content;
+    }
+}
+
+@mixin media-desctop {
+    @media (max-width: $width-desctop-1024) {
+        @content;
+    }
+}

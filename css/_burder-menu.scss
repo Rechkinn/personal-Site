@@ -1,0 +1,76 @@
+@use 'sass:math';
+@import 'variables';
+
+@function icon-span-transform-value($Width-Span, $Height-Span) {
+    $height-Sum: #{$height-Span * 3};
+    $difference: $width-Span - $height-Sum;
+    $result: math.div($difference, 2);
+    @return $result;
+}
+
+@mixin icon-span-transform($Width-Span, $Height-Span) {
+
+    transform: translateY(#{icon-span-transform-value($Width-Span, $Height-Span)});
+}
+
+$width-Span: 50px;
+$height-Span: 5px;
+
+$transform-before-after: math.div($width-Span - 25,2);
+
+.burger-menu {
+    width: 30%;
+    height: 100%;
+    position: relative;
+
+    &__span {
+        content: '';
+        position: absolute;
+        top: 50%; 
+        left: 70%;
+        transform: translate(-50%, -50%);
+        display: inline-block;
+        width: $width-Span;
+        height: $height-Span;
+        background-color: black;
+        border-radius: $border-radius-20;
+    }
+
+    &__span:first-child {
+        top: 35%;
+    }
+    &__span:last-child {
+        top: 65%;
+    }
+
+}
+
+// $transform-before-after: 25px;
+
+
+
+// .burger-menu__span {
+//     content: '';
+//     position: absolute;
+//     top: 50%; left: 50%;
+//     transform: translate(-50%, -50%);
+//     display: inline-block;
+//     width: $width-Span;
+//     height: $height-Span;
+//     background-color: black;
+//     border-radius: $border-radius-20;
+// }
+
+
+
+// $Y: 10px;
+
+// math.div($max, 16);
+.burger-menu::after{
+    // @include icon-span-transform($width-Span, $height-Span)
+    transform: translateY($transform-before-after);
+    // transform: translateY(math.div(($width-Span - $height-Span * 3)), 2);
+}
+.burger-menu::before{
+    transform: translateY(-#{$transform-before-after});
+}

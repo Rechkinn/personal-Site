@@ -1,0 +1,58 @@
+@import 'variables';
+@import 'mixins';
+
+.switch {
+
+    &__original {
+        position: absolute;
+        transform: scale(0);
+        opacity: 0;
+        left: 0;
+        top: 0;
+    }
+
+    $switch-Width: 175px;
+    $switch-Height: 40px;
+
+    &__custom {
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+        position: relative;
+        @include fluid-text($font-size-16, $font-size-16);
+        // font-size: $font-size-16;
+        padding: $padding-switch;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: inset 10px 10px 15px 0px #586597, inset -10px -10px 10px 0px #9caef7;
+        border-radius: $border-radius-20;
+        width: $switch-Width;
+        height: $switch-Height;
+
+    }
+
+    &__custom::after{
+        position: absolute;
+        left: 4px;
+        background-color: $color-blue;
+        border: 1px solid $color-white;
+        content: '';
+        width: calc($switch-Width/2);
+        height: calc($switch-Height/1.2);
+        border-radius: $border-radius-20;
+        transition: all 300ms;
+    }
+
+    &__original:checked + &__custom::after {
+        left: 83.5px;
+    }
+
+    @include media-tablet-768 {
+        width: 0;
+        opacity: 0;
+        scale: 0;
+        visibility: hidden;
+    }
+
+}
