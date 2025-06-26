@@ -47,3 +47,15 @@ $min-Width: 360;
         #{$maxSize * 1rem}
     );
 }
+
+@mixin hidden() {
+    opacity: 0;
+    scale: 0;
+    visibility: hidden;
+}
+
+@mixin show() {
+    opacity: 1;
+    scale: 1;
+    visibility: visible;
+}

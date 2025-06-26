@@ -1,76 +1,41 @@
 @use 'sass:math';
 @import 'variables';
+@import 'media';
 
-@function icon-span-transform-value($Width-Span, $Height-Span) {
-    $height-Sum: #{$height-Span * 3};
-    $difference: $width-Span - $height-Sum;
-    $result: math.div($difference, 2);
-    @return $result;
-}
 
-@mixin icon-span-transform($Width-Span, $Height-Span) {
+$width-Button: 50px;
+$height-Button: 50px;
 
-    transform: translateY(#{icon-span-transform-value($Width-Span, $Height-Span)});
-}
-
-$width-Span: 50px;
 $height-Span: 5px;
 
-$transform-before-after: math.div($width-Span - 25,2);
+$top: 50%;
+$top-Difference: 35%;
 
 .burger-menu {
-    width: 30%;
-    height: 100%;
+    width: $width-Button;
+    height: $height-Button;
     position: relative;
+
+    background-color: $color-button-transparent;
+    border: $border-0;
 
     &__span {
         content: '';
         position: absolute;
-        top: 50%; 
-        left: 70%;
+        top: $top;
         transform: translate(-50%, -50%);
         display: inline-block;
-        width: $width-Span;
+        width: $width-Button;
         height: $height-Span;
-        background-color: black;
+        background-color: $color-black;
         border-radius: $border-radius-20;
     }
 
     &__span:first-child {
-        top: 35%;
+        top: $top + $top-Difference;
     }
     &__span:last-child {
-        top: 65%;
+        top: $top - $top-Difference;
     }
-
-}
-
-// $transform-before-after: 25px;
-
-
-
-// .burger-menu__span {
-//     content: '';
-//     position: absolute;
-//     top: 50%; left: 50%;
-//     transform: translate(-50%, -50%);
-//     display: inline-block;
-//     width: $width-Span;
-//     height: $height-Span;
-//     background-color: black;
-//     border-radius: $border-radius-20;
-// }
-
-
-
-// $Y: 10px;
-
-// math.div($max, 16);
-.burger-menu::after{
-    // @include icon-span-transform($width-Span, $height-Span)
-    transform: translateY($transform-before-after);
-    // transform: translateY(math.div(($width-Span - $height-Span * 3)), 2);
-}
-.burger-menu::before{
-    transform: translateY(-#{$transform-before-after});
+    
 }

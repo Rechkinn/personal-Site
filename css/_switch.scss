@@ -48,11 +48,11 @@
         left: 83.5px;
     }
 
-    @include media-tablet-768 {
-        width: 0;
-        opacity: 0;
-        scale: 0;
-        visibility: hidden;
-    }
+    // @include media-tablet-768 {
+    //     width: 0;
+    //     opacity: 0;
+    //     scale: 0;
+    //     visibility: hidden;
+    // }
 
 }

@@ -1,11 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
+
+    <script>
+        function openCloseModalWindow() {
+            let modalWindow = document.querySelector('.header__burger-modal-window');
+            let menu = document.querySelector('.header__list');
+            let switchCustom = document.querySelector('.switch');
+            modalWindow.classList.toggle('hidden');
+            menu.classList.toggle('hidden');
+            switchCustom.classList.toggle('show');
+
+
+        }
+    </script>
+
 </head>
 <body>
     <header class="header">
@@ -16,7 +30,7 @@
                 </div>
                 <div class="header__buttons">
                     <nav class="header__menu">
-                        <ul class="header__list">
+                        <ul class="header__list hidden">
                             <li class="header__list-item">
                                 <a href="#" class="header__list-item-a">Статьи</a>
                             </li>
@@ -29,21 +43,27 @@
                         </ul>
                     </nav>
                 </div>
-                <div class="header__switch switch">
-                    <form action="" method="" class="switch__form">
-                        <label for="theme" class="switch__label">
-                            <input type="checkbox" id="theme" class="switch__original">
-                            <div class="switch__custom">
-                                <div class="switch__custom-name">светлый</div>
-                                <div class="switch__custom-name">тёмный</div>
-                            </div>
-                        </label>
-                    </form>
-                </div>
-                <div class="header__button-burger burger-menu">
-                    <span class="burger-menu__span"></span>
-                    <span class="burger-menu__span"></span>
-                    <span class="burger-menu__span"></span>
+                <div class="header__switch-and-burger">
+                    <div class="header__switch switch ">
+                        <form action="" method="" class="switch__form">
+                            <label for="theme" class="switch__label">
+                                <input type="checkbox" id="theme" class="switch__original">
+                                <div class="switch__custom">
+                                    <div class="switch__custom-name">светлый</div>
+                                    <div class="switch__custom-name">тёмный</div>
+                                </div>
+                            </label>
+                        </form>
+                    </div>
+                    <div class="header__burger">
+                        <button class="header__burger-button burger-menu" onclick="openCloseModalWindow()">
+                            <span class="burger-menu__span"></span>
+                            <span class="burger-menu__span"></span>
+                            <span class="burger-menu__span"></span>
+                        </button>
+                        
+                    </div>
+                    <div class="header__burger-modal-window hidden"></div>
                 </div>
             </div>
         </div>
