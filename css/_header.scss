@@ -94,7 +94,7 @@
         @include media-tablet-768 {
             @include hidden();
             position: absolute;
-            top: 65%;
+            top: 72%;
             left: 50%;
             transform: translate(-50%, -50%);
             display: block;
@@ -135,12 +135,12 @@
             position: absolute;
             top: 0;
             left: 0;
-            opacity: 1.6;
+            opacity: 1.0;
             width: 100vw;
             height: 100vh;
             background-color: $color-blue;
             z-index: 50;
-
+            // overflow: hidden;
         }
     }
     

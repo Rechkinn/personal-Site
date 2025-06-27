@@ -29,21 +29,9 @@ body {
   border: 1px solid red;
 }
 
-@media (max-width: 768px) {
-  .body_overflow-hidden {
-    overflow: hidden;
-  }
-}
-
 a {
   text-decoration: none;
   color: black;
-}
-
-.show {
-  opacity: 1;
-  scale: 1;
-  visibility: visible;
 }
 
 .header__inner {
@@ -119,7 +107,7 @@ a {
     scale: 0;
     visibility: hidden;
     position: absolute;
-    top: 65%;
+    top: 72%;
     left: 50%;
     transform: translate(-50%, -50%);
     display: block;
@@ -146,7 +134,7 @@ a {
     position: absolute;
     top: 0;
     left: 0;
-    opacity: 1.6;
+    opacity: 1;
     width: 100vw;
     height: 100vh;
     background-color: #7F90D7;
@@ -371,6 +359,13 @@ a {
 @media (max-width: 768px) {
   .section__description {
     grid-row: 4/6;
+  }
+}
+
+@media (max-width: 768px) {
+  .body_overflow-hidden {
+    overflow: hidden;
+    background-color: #7F90D7;
   }
 }
 

@@ -19,12 +19,7 @@ body{
     // overflow: hidden;
 }
 
-.body_overflow-hidden {
-    @include media-tablet-768 {
-        overflow: hidden;
-    }
-    
-}
+
 
 
 
@@ -33,11 +28,11 @@ a{
     color: black;
 }
 
-.show{
-    opacity: 1;
-    scale: 1;
-    visibility: visible;
-}
+// .show{
+//     opacity: 1;
+//     scale: 1;
+//     visibility: visible;
+// }
 
 
 @import 'header';
@@ -45,12 +40,26 @@ a{
 @import 'burder-menu';
 @import 'main';
 
+.body_overflow-hidden {
+    @include media-tablet-768 {
+        overflow: hidden;
+        background-color: $color-blue;
+    }
+}
 
 .hidden{
     opacity: 0;
     scale: 0;
     visibility: hidden;
 }
+// .position-absolute{
+//     @include media-tablet-768 {
+//         position: absolute;
+//         top: 0;
+//         left: 0;
+//     }
+    
+// }
 .show{
     opacity: 1;
     scale: 1;

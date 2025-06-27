@@ -13,5 +13,8 @@ function openCloseModalWindow() {
 
     let body = document.querySelector('body');
     body.classList.toggle('body_overflow-hidden');
+    // let main = document.querySelector('main');
+    // main.classList.toggle('hidden');
+    // main.classList.toggle('position-absolute');
 
 }
