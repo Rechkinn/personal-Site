@@ -2,6 +2,18 @@
 @import 'mixins';
 @import 'media';
 
+@mixin photo-description {
+    padding: 0 15px;
+    background-color: $color-white;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
 
 .section {
 
@@ -11,25 +23,22 @@
         margin: auto;
     }
 
-    $count-Col: 13;
-    $count-Row: 7;
+    // $count-Col: 13;
+    // $count-Row: 7;
     &__wrapper{
         margin: $margin-x-24;
         margin-top: 0;
         display: grid;
-        grid-template-columns: repeat($count-Col, 1fr);
-        grid-template-rows: repeat($count-Row, 100px);
+        grid-template-columns: repeat(13, 1fr);
+        grid-template-rows: repeat(7, 100px);
         justify-content: center;
         gap: $gap;
         @include media-desctop-1280 {
-            $count-Col: 9;
-            grid-template-columns: repeat($count-Col, 1fr);
-            $count-Row: 10;
-            grid-template-rows: repeat($count-Row, 100px);
+            grid-template-columns: repeat(9, 1fr);
+            grid-template-rows: repeat(10, 100px);
         }
         @include media-tablet-768 {
-            $count-Row: 13;
-            grid-template-rows: repeat($count-Row, 100px);
+            grid-template-rows: repeat(13, 100px);
         }
     }
 
@@ -54,7 +63,10 @@
             grid-row: 6 / 8;
         }
     }
+
     &__photo{
+        position: relative;
+
         background-image: url(../img/Worker.png);
         background-position: bottom;
         background-repeat: no-repeat;
@@ -67,7 +79,36 @@
             grid-column: 1 / 5;
             grid-row: 1 / 4;
         }
+
+        &-description{
+            // div
+            opacity: 0.0;
+            position: absolute;
+            @include photo-description;
+            transition: all 300ms;
+            
+
+            &-position-at-work{
+                @include fluid-text($font-size-20, $font-size-16);
+                // font-size: $font-size-16;
+            }
+            &-name{
+                @include fluid-text($font-size-25, $font-size-20);
+                font-weight: 800;
+            }
+            &-quote{
+                @include fluid-text($font-size-20, $font-size-16);
+            }
+        }
+
     }
+    &__photo:hover > &__photo-description{
+        opacity: 0.9;
+        @include media-desctop-1024 {
+            opacity: 0;
+        }
+    }
+
     &__contact{
         grid-column: span 4;
         grid-row: span 2;
@@ -113,11 +154,18 @@
         }
     }
     &__description{
+        position: absolute;
+        // top: 0;
+        // left: 0;
         @include hidden();
         @include media-desctop-1024 {
+            position: static;
             @include show();
             grid-column: 5 / -1;
             grid-row: 1 / 4;
+
+            @include photo-description;
+
         }
         @include media-tablet-768 {
             grid-row: 4 / 6;
