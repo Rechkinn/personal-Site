@@ -74,6 +74,9 @@ a {
   font-size: clamp(1rem, 1rem + 0vw, 1rem);
   position: relative;
 }
+.header__list-item-a:active {
+  color: blue;
+}
 .header__list-item-a::after {
   content: "";
   position: absolute;
@@ -87,26 +90,10 @@ a {
 .header__list-item-a:hover::after {
   width: 100%;
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .header__list-item-a:hover::after {
     width: 0;
   }
-}
-@media (max-width: 768px) {
-  .header__list-item::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    display: inline-block;
-    height: 2px;
-    width: 0;
-    background-color: blue;
-    transition: all 400ms;
-  }
-}
-.header__list-item:hover::after {
-  width: 100%;
 }
 @media (max-width: 768px) {
   .header__list {

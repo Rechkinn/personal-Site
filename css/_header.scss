@@ -50,20 +50,12 @@
             // font-size: $font-size-56;
             position: relative;
             
-            // &-a-span {
-            //     position: absolute;
-            //     bottom: 0;
-            //     display: inline-block;
-            //     height: 2px;
-            //     width: 0;
-            //     background-color: $color-blue-dark;
-            //     transition: all 400ms;
-            // }
-            // &-a-span {
-            //     width: 100%;
-            // }
-            &-a {
-                // width: 100%;
+            &-a:active {
+                // @include media-tablet-768 {
+                    color: $color-blue-dark;
+                    // font-size: 800;
+                    // font-weight: bold;
+                // }
             }
             &-a::after {
                 content: '';
@@ -77,32 +69,12 @@
             }
             &-a:hover::after {
                 width: 100%;
-                @include media-tablet-768 {
+                @include media-desctop-1024 {
                     width: 0;
                 }
             }
 
 
-        }
-
-        &-item::after {
-            @include media-tablet-768 {
-                content: '';
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                display: inline-block;
-                height: 2px;
-                width: 0;
-                background-color: $color-blue-dark;
-                transition: all 400ms;
-                // @include hover() {
-                //     width: 100%;
-                // };
-            }
-        }
-        &-item:hover::after {
-            width: 100%;
         }
 
         @include media-tablet-768 {
