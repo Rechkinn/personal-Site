@@ -1,5 +1,6 @@
 @use 'sass:math';
 @import 'variables';
+@import 'media';
 
 $max-Width: 1400;
 $min-Width: 360;
@@ -60,3 +61,8 @@ $min-Width: 360;
     visibility: visible;
 }
 
+@mixin use-full-column {
+    @include media-tablet-768 {
+        grid-column: 1 / -1;
+    }
+}

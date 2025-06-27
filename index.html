@@ -7,22 +7,7 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
 
-    <script>
-        function openCloseModalWindow() {
-            let modalWindow = document.querySelector('.header__burger-modal-window');
-            let menu = document.querySelector('.header__list');
-            let switchCustom = document.querySelector('.switch');
-            modalWindow.classList.toggle('hidden');
-            menu.classList.toggle('show');
-            switchCustom.classList.toggle('show');
-
-            let arrSpan = document.querySelectorAll('.burger-menu__span');
-            arrSpan.forEach(span => {
-                span.classList.toggle('burger-menu__span_close-45')
-            });
-
-        }
-    </script>
+    <script src="js/burgerMenu.js"></script>
 
 </head>
 <body>
@@ -79,6 +64,37 @@
         </div>
     </header>
     <main class="main">
+        <section class="section">
+            <div class="section__inner">
+                <div class="section__wrapper">
+                    <div class="section__qualities">
+                        section__qualities
+                    </div>
+                    <div class="section__photo">
+                        <!-- <img src="img/Worker.png" alt=""> -->
+                    </div>
+                    <div class="section__contact">
+                        section__contact
+                    </div>
+                    <div class="section__work">
+                        section__work
+                    </div>
+                    <div class="section__form">
+                        section__form
+                    </div>
+                    <div class="section__description">
+                        <!-- section__description -->
+                         Заместитель генерального директора по информационным технологиям НПП ТЭК
+
+Михаил Николаевич Семёнов
+
+"Продуктивная работа - это искуcство превращать идеи в результаты"
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
 
     </main>
 </body>
