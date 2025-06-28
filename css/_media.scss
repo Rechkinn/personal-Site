@@ -1,6 +1,6 @@
 @import 'variables';
 
-$width-phone: 360px;
+$width-phone-360: 360px;
 $width-tablet-480: 480px;
 $width-tablet-768: 768px;
 $width-desctop-1024: 1024px; 
@@ -8,6 +8,11 @@ $width-desctop-1024: 1024px;
 $width-desctop-1280: 1280px; 
 
 
+@mixin media-phone-360 {
+    @media (max-width: $width-phone-360) {
+        @content;
+    }
+}
 @mixin media-tablet-768 {
     @media (max-width: $width-tablet-768) {
         @content;

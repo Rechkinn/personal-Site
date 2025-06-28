@@ -87,7 +87,11 @@
                         section__contact
                     </div>
                     <div class="section__work">
-                        <h3 class="section__work-title">О месте работы</h3>
+                        <div class="section__work-title">
+                            <h3 class="section__work-title-h3">О месте работы</h3>
+                            <img src="img/logo25.png" alt="" class="section__work-title-img">
+                        </div>
+                        <!-- <h3 class="section__work-title">О месте работы</h3> -->
                         <div class="section__work-body">
                             <img src="img/NPP-TEK.jpg" alt="Фотография коллектива НПП ТЭК" class="section__work-body-photo">
                             <div class="section__work-body-description" >
@@ -122,9 +126,6 @@
             sectionWork.addEventListener("click", () => {
                 workBodyPhoto.classList.toggle('section__work-body-photo_transform-right');
             });
-
-
-
         })
     </script>
 </body>

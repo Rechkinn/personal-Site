@@ -148,25 +148,37 @@
         }
 
         &-title{
-            @include fluid-text($font-size-25, $font-size-20);
-            font-weight: 800;
-            text-align: center;
-            margin-bottom: 10px
+            display: flex;
+            justify-content: center;
+            align-items: baseline;
+
+            &-h3 {
+                @include fluid-text($font-size-25, $font-size-20);
+                font-weight: 800;
+                text-align: center;
+                margin-right: 10px;
+                margin-bottom: 10px;
+            }
+            &-img {
+                width: 25px;
+                object-fit: contain;
+                object-position: center;
+            }
         }
 
         &-body {
             position: relative;
-
             display: flex;
             height: 100%;
-            
             overflow-x: hidden;
+
+            $animation-Duration: 0.55s;
 
             @include media-tablet-768 {
                 justify-content: center;
                 align-items: start;
             }
-            $animation-Duration: 0.55s;
+
             &-photo {
                 height: 86%;
                 object-fit: contain;
@@ -192,28 +204,24 @@
                 }
             }
 
-            &-photo:hover {
-                @include media-tablet-768 {
-                    // transform: translateX(103%);
-                }
-                
-            }
-            
             &-description {
-                
                 transition: all 500ms ease-in-out $animation-Duration*1.5;
                 padding: 0 $padding-x-15;
-                
+                overflow-y: auto;
 
                 @include media-tablet-768 {
                     position: absolute;
                     top: 0;
-                    // opacity: 0;
+                }
+
+                @include media-phone-360 {
+                    max-height: 265px;
                 }
 
                 &-text{
                     @include fluid-text($font-size-20, $font-size-16);
-                    margin-bottom: 15px;
+                    margin-bottom: 5px;
+                    padding-top: 5px
                 }
                 &-a{
                     @include fluid-text($font-size-16, $font-size-16);
@@ -221,29 +229,21 @@
                     background-color: $color-blue-dark;
                     padding: 7.5px;
                     border-radius: 10px;
-                    color: white;
+                    color: $color-button-text;
                     transition: all 300ms;
                 }
                 &-a:hover{
-                    background-color: red;
+                    background-color: $color-red;
                     @include media-tablet-768 {
                         background-color: $color-blue-dark
                     }
                 }
                 &-a:active{
-                    background-color: red;
+                    background-color: $color-red;
                     scale: 0.75;
                 }
-
             }
-
-            &-photo:hover + &-description {
-                // opacity: 1;
-                
-            }
-
         }
-        
         
         &-logo {
             // padding: 15px;
