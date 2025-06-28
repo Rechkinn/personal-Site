@@ -226,14 +226,6 @@ a {
     scale: 0.97;
   }
 }
-@keyframes opacity-0-1 {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 .section__inner {
   border: 1px solid red;
   max-width: 1400px;
@@ -418,8 +410,8 @@ a {
   }
 }
 .section__work-body-description {
+  transition: all 500ms ease-in-out 0.825s;
   padding: 0 15px;
-  transition: all 500ms ease-in-out 0.55s;
 }
 @media (max-width: 768px) {
   .section__work-body-description {
@@ -439,6 +431,20 @@ a {
   padding: 7.5px;
   border-radius: 10px;
   color: white;
+  transition: all 300ms;
+}
+.section__work-body-description-a:hover {
+  scale: 0.85;
+}
+@media (max-width: 768px) {
+  .section__work-body-description-a:hover {
+    scale: 0;
+  }
+}
+@media (max-width: 768px) {
+  .section__work-body-description-a:active {
+    scale: 0.85;
+  }
 }
 .section__work-body-photo:hover + .section__work-body-description {
   opacity: 1;
