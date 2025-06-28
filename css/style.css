@@ -397,6 +397,8 @@ a {
 }
 @media (max-width: 768px) {
   .section__work-body-photo {
+    position: absolute;
+    z-index: 100;
     width: 100%;
     -o-object-fit: cover;
        object-fit: cover;

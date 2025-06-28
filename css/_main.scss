@@ -173,6 +173,9 @@
                 border-radius: 10px;
                 transition: all 700ms ease-out;
                 @include media-tablet-768 {
+                    position: absolute;
+                    z-index: 100;
+
                     width: 100%;
                     object-fit: cover;
                     object-position: bottom;
