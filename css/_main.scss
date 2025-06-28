@@ -1,6 +1,8 @@
 @import 'variables';
 @import 'mixins';
 @import 'media';
+@import 'animation';
+
 
 @mixin photo-description {
     padding: 0 15px;
@@ -125,6 +127,12 @@
         
     }
     &__work{
+
+        
+
+        // position: relative;
+        padding: $padding-x-15;
+
         grid-column: span 9;
         grid-row: span 3;
         @include media-desctop-1280 {
@@ -138,6 +146,128 @@
         @include media-tablet-768 {
             grid-row: 8 / 11;
         }
+
+        &-title{
+            @include fluid-text($font-size-25, $font-size-20);
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 10px
+        }
+
+        &-body {
+            position: relative;
+
+            display: flex;
+            height: 100%;
+            
+            // overflow-x: hidden;
+
+            @include media-tablet-768 {
+                justify-content: center;
+                align-items: start;
+            }
+            $animation-Duration: 0.55s;
+            &-photo {
+                height: 86%;
+                object-fit: contain;
+                border-radius: 10px;
+                transition: all 700ms ease-out;
+                @include media-tablet-768 {
+                    width: 100%;
+                    object-fit: cover;
+                    object-position: bottom;
+                    animation-name: pulsation;
+                    animation-duration: $animation-Duration;
+                    animation-iteration-count: infinite;
+                    animation-direction: alternate;
+                    animation-timing-function: ease-in-out;
+
+                }
+            }
+            &-photo:hover {
+                @include media-tablet-768 {
+                    transform: skew(90deg);
+                }
+                
+            }
+            &-description {
+                
+                @include media-tablet-768 {
+                    position: absolute;
+                    top: 0;
+                    opacity: 0;
+                    // animation-name: opacity-0-1;
+                    // animation-delay: $animation-Duration;
+                    // animation-duration: 1s;
+                    // animation-iteration-count: 1;
+                    // @include hidden
+                }
+                
+                padding: 0 $padding-x-15;
+                &-text{
+                    @include fluid-text($font-size-20, $font-size-16);
+                    // text-align: left;
+                    margin-bottom: 15px;
+                }
+                &-a{
+                    @include fluid-text($font-size-16, $font-size-16);
+                    font-weight: 800;
+                    // display: block;
+                    // margin: auto;
+                    background-color: $color-blue-dark;
+                    padding: 7.5px;
+                    border-radius: 10px;
+                    color: white;
+                }
+                transition: all 500ms ease-in-out $animation-Duration;
+            }
+
+            &-photo:hover + &-description {
+                // animation-name: opacity-0-1;
+                // animation-delay: $animation-Duration + 0.05;
+                // animation-duration: 2s;
+                // animation-iteration-count: 1;
+                opacity: 1;
+                // transition: all 0s
+                // animation-direction: alternate;
+            }
+
+        }
+
+        
+        
+        &-logo {
+            // padding: 15px;
+
+            display: block;
+            position: absolute;
+            top: $padding-x-15;
+            left: $padding-x-15;
+            width: 100px;
+            height: 100px;
+
+            border-radius: 10px;
+            
+            background-color: white;
+            backdrop-filter: opacity(50%);
+
+            background-image: url(../img/logo25.png);
+            background-position: top;
+            background-size: contain;
+            background-repeat: no-repeat;
+            // background-color: $color-white;
+            // background-clip: content-box;
+            // bac
+            // &-img {
+            //     // display: inline-block;
+            //     // width: 100px;
+            //     // height: 100px;
+            //     object-fit: contain;
+            // }
+
+            
+        }
+
     }
     &__form{
         grid-column: 10 / -1;

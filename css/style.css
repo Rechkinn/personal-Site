@@ -218,6 +218,22 @@ a {
   transform: rotate(-45deg);
 }
 
+@keyframes pulsation {
+  0% {
+    scale: 1;
+  }
+  100% {
+    scale: 0.97;
+  }
+}
+@keyframes opacity-0-1 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .section__inner {
   border: 1px solid red;
   max-width: 1400px;
@@ -334,6 +350,7 @@ a {
   }
 }
 .section__work {
+  padding: 15px;
   grid-column: span 9;
   grid-row: span 3;
 }
@@ -353,6 +370,91 @@ a {
   .section__work {
     grid-row: 8/11;
   }
+}
+.section__work-title {
+  font-size: clamp(1.25rem, 1.1418269231rem + 0.4807692308vw, 1.5625rem);
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.section__work-body {
+  position: relative;
+  display: flex;
+  height: 100%;
+}
+@media (max-width: 768px) {
+  .section__work-body {
+    justify-content: center;
+    align-items: start;
+  }
+}
+.section__work-body-photo {
+  height: 86%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 10px;
+  transition: all 700ms ease-out;
+}
+@media (max-width: 768px) {
+  .section__work-body-photo {
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: bottom;
+       object-position: bottom;
+    animation-name: pulsation;
+    animation-duration: 0.55s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+  }
+}
+@media (max-width: 768px) {
+  .section__work-body-photo:hover {
+    transform: skew(90deg);
+  }
+}
+.section__work-body-description {
+  padding: 0 15px;
+  transition: all 500ms ease-in-out 0.55s;
+}
+@media (max-width: 768px) {
+  .section__work-body-description {
+    position: absolute;
+    top: 0;
+    opacity: 0;
+  }
+}
+.section__work-body-description-text {
+  font-size: clamp(1rem, 0.9134615385rem + 0.3846153846vw, 1.25rem);
+  margin-bottom: 15px;
+}
+.section__work-body-description-a {
+  font-size: clamp(1rem, 1rem + 0vw, 1rem);
+  font-weight: 800;
+  background-color: blue;
+  padding: 7.5px;
+  border-radius: 10px;
+  color: white;
+}
+.section__work-body-photo:hover + .section__work-body-description {
+  opacity: 1;
+}
+.section__work-logo {
+  display: block;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  background-color: white;
+  -webkit-backdrop-filter: opacity(50%);
+          backdrop-filter: opacity(50%);
+  background-image: url(../img/logo25.png);
+  background-position: top;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 .section__form {
   grid-column: 10/-1;
