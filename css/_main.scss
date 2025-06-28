@@ -221,15 +221,14 @@
                     transition: all 300ms;
                 }
                 &-a:hover{
-                    scale: 0.85;
+                    background-color: red;
                     @include media-tablet-768 {
-                        scale: 0;
+                        background-color: $color-blue-dark
                     }
                 }
                 &-a:active{
-                    @include media-tablet-768 {
-                        scale: 0.85;
-                    }
+                    background-color: red;
+                    scale: 0.75;
                 }
 
             }

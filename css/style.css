@@ -434,17 +434,16 @@ a {
   transition: all 300ms;
 }
 .section__work-body-description-a:hover {
-  scale: 0.85;
+  background-color: red;
 }
 @media (max-width: 768px) {
   .section__work-body-description-a:hover {
-    scale: 0;
+    background-color: blue;
   }
 }
-@media (max-width: 768px) {
-  .section__work-body-description-a:active {
-    scale: 0.85;
-  }
+.section__work-body-description-a:active {
+  background-color: red;
+  scale: 0.75;
 }
 .section__work-body-photo:hover + .section__work-body-description {
   opacity: 1;
