@@ -160,7 +160,7 @@
             display: flex;
             height: 100%;
             
-            // overflow-x: hidden;
+            overflow-x: hidden;
 
             @include media-tablet-768 {
                 justify-content: center;
@@ -189,7 +189,8 @@
             }
             &-photo:hover {
                 @include media-tablet-768 {
-                    transform: skew(90deg);
+                    // transform: skew(90deg);
+                    transform: translateX(103%);
                 }
                 
             }

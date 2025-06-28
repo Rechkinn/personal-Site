@@ -381,6 +381,7 @@ a {
   position: relative;
   display: flex;
   height: 100%;
+  overflow-x: hidden;
 }
 @media (max-width: 768px) {
   .section__work-body {
@@ -413,7 +414,7 @@ a {
 }
 @media (max-width: 768px) {
   .section__work-body-photo:hover {
-    transform: skew(90deg);
+    transform: translateX(103%);
   }
 }
 .section__work-body-description {
