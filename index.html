@@ -6,9 +6,6 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
-
-    <script src="js/burgerMenu.js"></script>
-    
 </head>
 <body>
     <header class="header">
@@ -104,26 +101,16 @@
                     </div>
                     <div class="section__description">
                         <div class="section__photo-description-position-at-work">Заместитель генерального директора по информационным технологиям НПП ТЭК</div>
-                            <div class="section__photo-description-name">Михаил Николаевич Семёнов</div>
-                            <div class="section__photo-description-quote">
-                                <q>Продуктивная работа - это искуcство превращать идеи в результаты</q>
-                            </div>
+                        <div class="section__photo-description-name">Михаил Николаевич Семёнов</div>
+                        <div class="section__photo-description-quote">
+                            <q>Продуктивная работа - это искуcство превращать идеи в результаты</q>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-        
-        
-
     </main>
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            let workBodyPhoto = document.querySelector('.section__work-body-photo');
-            const sectionWork = document.querySelector('.section__work')
-            sectionWork.addEventListener("click", () => {
-                workBodyPhoto.classList.toggle('section__work-body-photo_transform-right');
-            });
-        })
-    </script>
+    <script src="js/burgerMenu.js"></script>
+    <script src="js/moveWorkPhoto.js"></script>
 </body>
 </html>
