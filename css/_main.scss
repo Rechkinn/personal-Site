@@ -185,12 +185,16 @@
                     animation-direction: alternate;
                     animation-timing-function: ease-in-out;
 
+                    &_transform-right {
+                        transform: translateX(103%);
+                    }
+
                 }
             }
+
             &-photo:hover {
                 @include media-tablet-768 {
-                    // transform: skew(90deg);
-                    transform: translateX(103%);
+                    // transform: translateX(103%);
                 }
                 
             }
@@ -204,7 +208,7 @@
                 @include media-tablet-768 {
                     position: absolute;
                     top: 0;
-                    opacity: 0;
+                    // opacity: 0;
                 }
 
                 &-text{
@@ -234,7 +238,7 @@
             }
 
             &-photo:hover + &-description {
-                opacity: 1;
+                // opacity: 1;
                 
             }
 

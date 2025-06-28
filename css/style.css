@@ -403,9 +403,7 @@ a {
     animation-direction: alternate;
     animation-timing-function: ease-in-out;
   }
-}
-@media (max-width: 768px) {
-  .section__work-body-photo:hover {
+  .section__work-body-photo_transform-right {
     transform: translateX(103%);
   }
 }
@@ -417,7 +415,6 @@ a {
   .section__work-body-description {
     position: absolute;
     top: 0;
-    opacity: 0;
   }
 }
 .section__work-body-description-text {
@@ -444,9 +441,6 @@ a {
 .section__work-body-description-a:active {
   background-color: red;
   scale: 0.75;
-}
-.section__work-body-photo:hover + .section__work-body-description {
-  opacity: 1;
 }
 .section__work-logo {
   display: block;
