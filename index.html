@@ -65,7 +65,47 @@
             <div class="section__inner">
                 <div class="section__wrapper">
                     <div class="section__qualities">
-                        section__qualities
+                        <div class="section__qualities-sticky-scroll sticky-scroll">
+                            <h3 class="sticky-scroll__title">О себе</h3>
+                            <div class="sticky-scroll__content">
+                                <div class="sticky-scroll__item">
+                                    <p class="sticky-scroll__item-text">
+                                        Развитие ИТ — мой приоритет.
+                                        Автоматизация и инфраструктура — 
+                                        всё это должно стать частью 
+                                        бизнес-процессов компании.</p>
+                                </div>
+                                <div class="sticky-scroll__item">
+                                    <p class="sticky-scroll__item-text">
+                                        Важно выстраивать взаимовыгодные 
+                                        отношения с партнёрами. Ценю 
+                                        надёжность, ответственность и 
+                                        готовность к долгосрочному 
+                                        сотрудничеству.</p>
+                                </div>
+                                <div class="sticky-scroll__item">
+                                    <p class="sticky-scroll__item-text">
+                                        Считаю, что эффективная 
+                                        команда — это половина 
+                                        успеха любого проекта.</p>
+                                </div>
+                                <div class="sticky-scroll__arrow sticky-scroll__arrow_left">
+                                    <button class="sticky-scroll__button sticky-scroll__button_left" onclick="scrollClickButton('qualities', -1)"></button>
+                                </div>
+                                <div class="sticky-scroll__arrow sticky-scroll__arrow_right">
+                                    <button class="sticky-scroll__button sticky-scroll__button_left" onclick="scrollClickButton('qualities', 1)"></button>
+                                </div>
+                            </div>
+                            <!-- <div class="sticky-scroll__arrows">
+                                <div class="sticky-scroll__arrow sticky-scroll__arrow_left"></div>
+                                <div class="sticky-scroll__arrow sticky-scroll__arrow_right"></div>
+                            </div> -->
+                            <div class="sticky-scroll__circles">
+                                <div class="sticky-scroll__circle sticky-scroll__circle_current"></div>
+                                <div class="sticky-scroll__circle"></div>
+                                <div class="sticky-scroll__circle"></div>
+                            </div>
+                        </div>
                     </div>
                     <div class="section__photo">
                         <div class="section__photo-description">
@@ -182,118 +222,8 @@
     </main>
     <script src="js/burgerMenu.js"></script>
     <script src="js/moveWorkPhoto.js"></script>
-    <script>
-
-        function scrollLeftCustom(stickyScrollContent, stickyScrollItemWidth, circlesList) {
-            const sectionContact    = document.querySelector('.section__contact');
-            let sectionContactWidth = sectionContact.clientWidth.toFixed(0);
-            sectionContactWidth     /= (sectionContactWidth / stickyScrollItemWidth).toFixed(0);
-            const differentWidth    = stickyScrollContent.scrollLeft.toFixed(0) % sectionContactWidth;
-
-            if(differentWidth < 10) {
-                circlesList.forEach(circle => {
-                    circle.classList.remove('sticky-scroll__circle_current');
-                });
-                const indexCircle = (stickyScrollContent.scrollLeft / sectionContactWidth).toFixed(0);
-                circlesList[indexCircle].classList.add('sticky-scroll__circle_current');
-            }
-        }
+    <script src="js/scroll.js"></script>
 
 
-
-        document.addEventListener("DOMContentLoaded", () => {
-
-            let stickyScrollList = document.querySelectorAll('.sticky-scroll');
-            stickyScrollList.forEach(stickyScroll => {
-
-                let stickyScrollContent     = stickyScroll.querySelector('.sticky-scroll__content')
-                const circlesList           = stickyScroll.querySelectorAll('.sticky-scroll__circle')
-                const stickyScrollItem      = stickyScrollContent.querySelector('.sticky-scroll__item')
-                const stickyScrollItemWidth = stickyScrollItem.clientWidth.toFixed(0);
-                
-                const scrollWidth = 1;
-                let left = scrollWidth;
-
-                let scrollContact;
-                
-                // console.log('window.clientWidth до', window.innerWidth)
-                
-                // setInterval(() => {
-                //     if(window.innerWidth <= 768) {
-                //         console.log('сработал if')
-                //         scrollContact = setInterval(() => {
-
-
-                //             if(circlesList[0].classList[
-                //                 circlesList[0].classList.length-1] === "sticky-scroll__circle_current"
-                //             ) {
-                //                 left = scrollWidth;
-                //             }
-                            
-                //             else if(circlesList[circlesList.length-1].classList[
-                //                 circlesList[circlesList.length-1].classList.length-1] === "sticky-scroll__circle_current"
-                //             ) {
-                //                 left = -scrollWidth;
-                //             }
-
-                //             stickyScrollContent.scrollBy({
-                //                 left: left,
-                //                 behavior: "smooth",
-                //             })
-
-
-                //         }, 2000);
-                //     }
-                //     else {
-                //         clearInterval(scrollContact);
-                //         console.log('сработал else')
-                //     }
-                // }, 2000)
-
-                
-                // console.log('window.clientWidth после', window.innerWidth)
-                
-
-                stickyScrollContent.addEventListener("scroll", () => {
-                    // clearInterval(scrollContact);
-
-                    scrollLeftCustom(stickyScrollContent, stickyScrollItemWidth, circlesList);
-                    
-
-                    const sectionContact    = document.querySelector('.section__contact');
-                    let sectionContactWidth = sectionContact.clientWidth.toFixed(0);
-                    sectionContactWidth     /= (sectionContactWidth / stickyScrollItemWidth).toFixed(0);
-                    const differentWidth    = stickyScrollContent.scrollLeft.toFixed(0) % sectionContactWidth;
-
-
-                    // setInterval(() => {
-                    //     stickyScrollContent.scrollLeft = sectionContactWidth;
-                    //     console.log('------')
-                    // }, 1000);
-
-
-
-                    if(differentWidth < 10) {
-                        circlesList.forEach(circle => {
-                            circle.classList.remove('sticky-scroll__circle_current');
-                        });
-                        const indexCircle = (stickyScrollContent.scrollLeft / sectionContactWidth).toFixed(0);
-                        circlesList[indexCircle].classList.add('sticky-scroll__circle_current');
-                    }
-                });
-
-
-                
-            });
-        })
-    </script>
-    <script>
-        // document.addEventListener("DOMContentLoaded", () => {
-        //     let stickyScrollList = document.querySelectorAll('.sticky-scroll');
-        //     stickyScrollList.forEach(stickyScroll => {
-
-        //     })
-        // })
-    </script>
 </body>
 </html>

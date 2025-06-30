@@ -230,6 +230,7 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  align-items: center;
 }
 .sticky-scroll__title {
   font-size: clamp(1.25rem, 1.1418269231rem + 0.4807692308vw, 1.5625rem);
@@ -241,20 +242,9 @@ a {
   display: flex;
   flex-wrap: nowrap;
   overflow-x: auto;
-  scrollbar-width: thin;
-  scrollbar-color: #7F90D7 #7F90D7;
 }
 .sticky-scroll__content::-webkit-scrollbar {
-  height: 10px;
-  width: 100%;
-}
-.sticky-scroll__content::-webkit-scrollbar-thumb {
-  background-color: #7F90D7;
-  opacity: 0;
-}
-.sticky-scroll__content::-webkit-scrollbar-track {
-  background-color: #7F90D7;
-  opacity: 0;
+  display: none;
 }
 .sticky-scroll__item {
   scroll-snap-align: start;
@@ -263,20 +253,8 @@ a {
   align-items: center;
 }
 .sticky-scroll__circles {
-  opacity: 0;
-  scale: 0;
-  visibility: hidden;
-  position: absolute;
   display: flex;
   justify-content: center;
-}
-@media (max-width: 768px) {
-  .sticky-scroll__circles {
-    position: static;
-    opacity: 1;
-    scale: 1;
-    visibility: visible;
-  }
 }
 .sticky-scroll__circle:not(:last-child) {
   margin-right: 10px;
@@ -347,6 +325,71 @@ a {
   .section__qualities {
     grid-row: 6/8;
   }
+}
+.section__qualities .sticky-scroll {
+  position: relative;
+  height: 100%;
+}
+@media (max-width: 360px) {
+  .section__qualities .sticky-scroll {
+    justify-content: space-evenly;
+  }
+}
+.section__qualities .sticky-scroll__content {
+  width: 100%;
+}
+.section__qualities .sticky-scroll__item {
+  width: 100%;
+  height: 100%;
+}
+.section__qualities .sticky-scroll__item-text {
+  height: 100%;
+  text-align: center;
+  font-size: clamp(1rem, 0.8052884615rem + 0.8653846154vw, 1.5625rem);
+  padding: 0 10px;
+}
+.section__qualities .sticky-scroll__arrow {
+  opacity: 0;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  bottom: 20px;
+  transition: all 300ms;
+}
+@media (max-width: 1024px) {
+  .section__qualities .sticky-scroll__arrow {
+    opacity: 1;
+  }
+}
+@media (max-width: 360px) {
+  .section__qualities .sticky-scroll__arrow {
+    bottom: 10px;
+  }
+}
+.section__qualities .sticky-scroll__arrow_left {
+  left: 20px;
+}
+.section__qualities .sticky-scroll__arrow_right {
+  right: 20px;
+  rotate: 180deg;
+}
+.section__qualities .sticky-scroll__button {
+  background-color: white;
+  border: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-image: url("../img/arrow-left-black.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.section__qualities .sticky-scroll__button:active {
+  background-color: blue;
+}
+.section__qualities .sticky-scroll:hover .sticky-scroll__arrow {
+  opacity: 1;
 }
 .section__photo {
   position: relative;
@@ -468,6 +511,20 @@ a {
 @media (max-width: 768px) {
   .section__contact .sticky-scroll__item:last-child :nth-child(1n):not(:last-child) {
     margin-right: clamp(0.9375rem, -1.9831730769rem + 12.9807692308vw, 9.375rem);
+  }
+}
+.section__contact .sticky-scroll__circles {
+  opacity: 0;
+  scale: 0;
+  visibility: hidden;
+  position: absolute;
+}
+@media (max-width: 768px) {
+  .section__contact .sticky-scroll__circles {
+    position: static;
+    opacity: 1;
+    scale: 1;
+    visibility: visible;
   }
 }
 .section__work {

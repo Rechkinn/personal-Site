@@ -1,4 +1,5 @@
 
+$font-size-8: 8;
 $font-size-16: 16;
 $font-size-20: 20;
 $font-size-25: 25;
@@ -13,6 +14,7 @@ $color-shadow-icon: #222;
 $color-white: white;
 $color-black: black;
 $color-blue: #7F90D7;
+// $color-blue: #3b3b3b;
 $color-blue-dark: blue;
 $color-red: red;
 
@@ -38,3 +40,6 @@ $margin-x-48: 48px;
 
 $margin-y-24: 24px;
 
+// $color-arrow: 'white';
+$color-arrow: 'black';
+$url-arrow: '../img/arrow-left-#{$color-arrow}.png';
