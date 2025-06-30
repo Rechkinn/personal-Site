@@ -241,6 +241,8 @@ a {
   display: flex;
   flex-wrap: nowrap;
   overflow-x: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #7F90D7 #7F90D7;
 }
 .sticky-scroll__content::-webkit-scrollbar {
   height: 10px;
@@ -256,6 +258,7 @@ a {
 }
 .sticky-scroll__item {
   scroll-snap-align: start;
+  scroll-snap-stop: always;
   flex-shrink: 0;
   align-items: center;
 }
