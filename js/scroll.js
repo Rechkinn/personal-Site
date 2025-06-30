@@ -10,11 +10,20 @@ function scrollCustom(stickyScrollContent, direction) {
 
 }
 
-function scrollClickButton(nameSection, direction) {
+function scrollClickButton(nameSection, direction = 'left') {
+    
+    let znak = '-';
+    if(direction === 'right') {
+        znak = '+';
+    }
+
     let stickyScroll = document.querySelector(`.section__${nameSection}-sticky-scroll`);
     for(let i = 0; i < stickyScroll.childNodes.length; i++) {
         if(stickyScroll.children[i].classList[0] == 'sticky-scroll__content') {
-            scrollCustom(stickyScroll.children[i], direction);
+            if(direction === 'left') {
+
+            }
+            scrollCustom(stickyScroll.children[i], Number(`${znak}${stickyScroll.clientWidth}`));
             break;
         }
     }
@@ -26,10 +35,10 @@ function setIntervalAutoScroll(stickyScrollContent, circlesList) {
             circlesList.forEach((circle, indexCircle) => {
                 if(circle.classList.contains('sticky-scroll__circle_current')) {
                     if(indexCircle === 0) {
-                        leftValue = 1000;
+                        leftValue = 1;
                     }
                     else if(indexCircle === circlesList.length - 1) {
-                        leftValue = -1000;
+                        leftValue = -1;
                     }
                 }
             });
@@ -39,37 +48,6 @@ function setIntervalAutoScroll(stickyScrollContent, circlesList) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-
-    // let stickyScroll = document.querySelector(`.section__${nameSection}-sticky-scroll`);
-    // let qwe = document.querySelector(`.section__qualities-sticky-scroll`);
-    
-    // for(let i = 0; i < qwe.childNodes.length; i++) {
-    //     try {
-    //         if(qwe.childNodes[i].classList.contains === 'sticky-scroll__content') {
-
-
-    //             break;
-    //         }
-    //     }
-    //     catch {
-
-    //     }
-    // }
-    
-    // qwe.childNodes.forEach(element => {
-        
-    //     try{
-    //         element.classList.contains === 'sticky-scroll__content'
-    //     }
-    //     catch {
-
-    //     }
-        
-    //     console.log(element)
-    //     // sticky-scroll__content
-    // });
-    // console.log(qwe.childNodes)
-
 
     const stickyScrollList = document.querySelectorAll('.sticky-scroll');
     let nameSectionList = [];
