@@ -35,6 +35,12 @@ $width-desctop-1280: 1280px;
     }
 }
 
+@mixin media-min-width($min-width) {
+    @media (min-width: $min-width) {
+        @content;
+    }
+}
+
 @mixin hover() {
     @media (any-hover: hover) {
         &:hover {

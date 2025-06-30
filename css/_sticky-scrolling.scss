@@ -1,0 +1,78 @@
+@import 'variables';
+@import 'animation';
+
+
+
+
+.sticky-scroll {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    &__title {
+        @include fluid-text($font-size-25, $font-size-20);
+        font-weight: 800;
+        text-align: center;
+    }
+
+    &__content{
+        scroll-snap-type: x mandatory;
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+
+
+        // scrollbar-width: thin;
+        // scrollbar-color: rgb(101, 60, 236) bisque;
+        &::-webkit-scrollbar{
+            height: 10px;
+            width: 100%;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: $color-blue;
+            opacity: 0;
+        }
+        &::-webkit-scrollbar-track {
+            background-color: $color-blue;
+            opacity: 0;
+        }
+
+    }
+    
+    &__item{
+        scroll-snap-align: start;
+        flex-shrink: 0;
+        // height: 100%;
+        align-items: center;
+    }
+
+    &__circles {
+        @include hidden;
+        position: absolute;
+        @include media-tablet-768 {
+            position: static;
+            @include show;
+        }
+
+        display: flex;
+        justify-content: center;
+    }
+    &__circle:not(:last-child) {
+        margin-right: 10px;
+    }
+    &__circle {
+        width: 10px;
+        height: 10px;
+        background-color: $color-white-static;
+        border-radius: $border-radius-20;
+
+        &_current {
+            background-color: $color-blue-dark;
+        }
+    }
+
+
+}
+
+

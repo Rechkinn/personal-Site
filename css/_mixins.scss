@@ -67,4 +67,8 @@ $min-Width: 360;
     }
 }
 
-// @mixin position()
+@mixin box-shadow-border($x: 1px, $y: 1px, $blur: 1px) {
+    -webkit-filter: drop-shadow($x $y $blur $color-shadow-icon);
+    -mz-filter: drop-shadow($x $y $blur $color-shadow-icon);
+    filter: drop-shadow($x $y $blur $color-shadow-icon);
+}

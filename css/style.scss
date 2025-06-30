@@ -38,7 +38,11 @@ a{
 @import 'header';
 @import 'switch';
 @import 'burder-menu';
+
+@import 'sticky-scrolling';
 @import 'main';
+
+
 
 .body_overflow-hidden {
     @include media-tablet-768 {
