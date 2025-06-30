@@ -1,4 +1,4 @@
-let leftValue = 1; // направление движения автоскролла
+let leftValue = 1000; // направление движения автоскролла
 const timeAutoScroll = 5; // время срабатывания автоскролла (секунд)
 const minWidthScreenForAutoScroll = 1024; // минимальная ширина для работы автоскролла
 
@@ -26,10 +26,10 @@ function setIntervalAutoScroll(stickyScrollContent, circlesList) {
             circlesList.forEach((circle, indexCircle) => {
                 if(circle.classList.contains('sticky-scroll__circle_current')) {
                     if(indexCircle === 0) {
-                        leftValue = 1;
+                        leftValue = 1000;
                     }
                     else if(indexCircle === circlesList.length - 1) {
-                        leftValue = -1;
+                        leftValue = -1000;
                     }
                 }
             });
