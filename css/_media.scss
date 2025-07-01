@@ -13,6 +13,11 @@ $width-desctop-1280: 1280px;
         @content;
     }
 }
+@mixin media-phone-480 {
+    @media (max-width: $width-tablet-480) {
+        @content;
+    }
+}
 @mixin media-tablet-768 {
     @media (max-width: $width-tablet-768) {
         @content;

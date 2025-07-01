@@ -231,6 +231,9 @@ a {
   background-color: white;
   border: 2px solid black;
   font-size: clamp(0.5rem, 0.2403846154rem + 1.1538461538vw, 1.25rem);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   transition: all 300ms;
 }
 .form__name-input:focus, .form__email-input:focus, .form__message-textarea:focus {
@@ -283,14 +286,6 @@ a {
   scale: 0.75;
 }
 
-@keyframes pulsation {
-  0% {
-    scale: 1;
-  }
-  100% {
-    scale: 0.97;
-  }
-}
 .sticky-scroll {
   display: flex;
   flex-direction: column;
@@ -334,14 +329,6 @@ a {
   background-color: blue;
 }
 
-@keyframes pulsation {
-  0% {
-    scale: 1;
-  }
-  100% {
-    scale: 0.97;
-  }
-}
 .section__inner {
   border: 1px solid red;
   max-width: 1400px;
@@ -364,7 +351,7 @@ a {
 }
 @media (max-width: 768px) {
   .section__wrapper {
-    grid-template-rows: repeat(16, 100px);
+    grid-template-rows: repeat(17, 100px);
   }
 }
 .section__wrapper > :nth-child(n) {
@@ -519,7 +506,7 @@ a {
 }
 @media (max-width: 768px) {
   .section__contact {
-    grid-row: 11/13;
+    grid-row: 12/14;
   }
 }
 .section__contact-sticky-scroll {
@@ -531,6 +518,9 @@ a {
   .section__contact-sticky-scroll {
     justify-content: start;
   }
+}
+.section__contact .sticky-scroll__content {
+  height: 70%;
 }
 @media (min-width: 769px) {
   .section__contact .sticky-scroll__content {
@@ -611,7 +601,7 @@ a {
 }
 @media (max-width: 768px) {
   .section__work {
-    grid-row: 8/11;
+    grid-row: 8/12;
   }
 }
 .section__work-title {
@@ -634,16 +624,12 @@ a {
      object-position: center;
 }
 .section__work-body {
-  position: relative;
   display: flex;
   height: 100%;
-  overflow-x: hidden;
 }
 @media (max-width: 768px) {
   .section__work-body {
-    justify-content: center;
-    align-items: start;
-    max-height: 274px;
+    flex-direction: column;
   }
 }
 .section__work-body-photo {
@@ -655,39 +641,26 @@ a {
 }
 @media (max-width: 768px) {
   .section__work-body-photo {
-    position: absolute;
-    z-index: 100;
-    width: 100%;
-    height: 100%;
+    max-height: 225px;
     -o-object-fit: cover;
        object-fit: cover;
     -o-object-position: bottom;
        object-position: bottom;
-    animation-name: pulsation;
-    animation-duration: 0.55s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-    animation-timing-function: ease-in-out;
   }
-  .section__work-body-photo_transform-right {
-    transform: translateX(103%);
+}
+@media (max-width: 480px) {
+  .section__work-body-photo {
+    max-height: 150px;
+  }
+}
+@media (max-width: 360px) {
+  .section__work-body-photo {
+    max-height: 90px;
   }
 }
 .section__work-body-description {
   transition: all 500ms ease-in-out 0.825s;
   padding: 0 15px;
-  overflow-y: auto;
-}
-@media (max-width: 768px) {
-  .section__work-body-description {
-    position: absolute;
-    top: 0;
-  }
-}
-@media (max-width: 360px) {
-  .section__work-body-description {
-    max-height: 265px;
-  }
 }
 .section__work-body-description-text {
   font-size: clamp(1rem, 0.9134615385rem + 0.3846153846vw, 1.25rem);
@@ -735,7 +708,7 @@ a {
 }
 @media (max-width: 768px) {
   .section__form {
-    grid-row: 13/-1;
+    grid-row: 14/-1;
   }
 }
 .section__form-body {
