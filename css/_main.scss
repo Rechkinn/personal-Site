@@ -40,7 +40,7 @@
             grid-template-rows: repeat(10, 100px);
         }
         @include media-tablet-768 {
-            grid-template-rows: repeat(14, 100px);
+            grid-template-rows: repeat(16, 100px);
         }
     }
 
@@ -394,6 +394,12 @@
         }
     }
     &__form{
+
+        padding: 10px 0;
+
+        display: flex;
+        flex-direction: column;
+
         grid-column: 10 / -1;
         grid-row: 3 / -1;
         @include media-desctop-1280 {
@@ -406,6 +412,117 @@
         @include media-tablet-768 {
             grid-row: 13 / -1;
         }
+
+        
+        &-body {
+            height: 100%;
+        }
+
+        @mixin setDisplayFlex {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            height: 100%;
+        }
+
+        & .form {
+            @include setDisplayFlex;
+            
+            @include media-desctop-1280 {
+                padding: 10px;
+                padding-top: 0;
+
+                display: grid;
+                grid-template-columns: 1fr 2fr;
+                grid-template-rows: repeat(4, 1fr);
+                grid-template-rows: 1fr 2fr 2fr 2fr;
+                align-items: center;
+                gap: 10px;
+
+            }
+            @include media-tablet-768 {
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: 1fr 1fr 4fr 1fr;
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+            @include media-phone-360 {
+                @include setDisplayFlex;
+                align-items: stretch;
+            }
+
+            &__title {
+                @include media-desctop-1280 {
+                    grid-column: 1 / -1;
+                }
+            }
+            &__name {
+
+                @include media-tablet-768 {
+                    grid-column: 1 / 2;
+                }
+
+                &-input {
+                    @include media-min-width($width-desctop-1280 + 1) {
+                        width: 300px;
+                    }
+                    @include media-tablet-768 {
+                        width: 100%;
+                        @include fluid-text(20, 16);
+                    }
+                    
+                }
+            }
+                
+            &__email {
+
+                @include media-tablet-768 {
+                    grid-column: 2 / -1;
+                }
+                
+                &-input {
+                    @include media-min-width($width-desctop-1280 + 1) {
+                        width: 300px;
+                    }
+                    @include media-tablet-768 {
+                        width: 100%;
+                        @include fluid-text(20, 16);
+                    }
+                }
+            }
+            &__message {
+                @include media-desctop-1280 {
+                    grid-column: 2 / -1;
+                    grid-row: 2 / -1;
+                    height: 100%;
+                    &-textarea {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                @include media-tablet-768 {
+                    grid-column: 1 / -1;
+                    grid-row: 3 / 4;
+                }
+
+                &-textarea {
+                    @include media-min-width($width-desctop-1280 + 1) {
+                        width: 300px;
+                    }
+                    @include media-tablet-768 {
+                        @include fluid-text(20, 16);
+                    }
+                }
+                
+            }
+            &__button {
+                @include media-tablet-768 {
+                    grid-column: 1 / -1;
+                }
+            }
+            
+        }
+
     }
     &__description{
         position: absolute;

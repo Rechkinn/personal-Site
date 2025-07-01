@@ -1,0 +1,66 @@
+
+@import 'variables';
+
+.form {
+    text-align: center;
+
+    &__title {
+        @include fluid-text($font-size-25, $font-size-20);
+    }
+
+    &__name-input, &__email-input, &__message-textarea {
+        padding: 10px;
+        outline: none;
+        color: $color-black;
+        background-color: $color-white;
+        border: 2px solid $color-black;
+        @include fluid-text(20, 8);
+        transition: all 300ms;
+    }
+    &__name-input:focus, &__email-input:focus, &__message-textarea:focus {
+        box-shadow: inset 0px 0px 7px 0px $color-blue-dark;
+        border-color: $color-blue-dark;
+    }
+    &__name-input::placeholder, &__email-input::placeholder, &__message-textarea::placeholder {
+        color: $color-light-grey;
+    }
+    &__message-textarea {
+        resize: none;
+        height: 300px;
+
+        &::-webkit-scrollbar{
+            width: 10px;
+        }
+        &::-webkit-scrollbar-thumb{
+            background-color: $color-blue-dark;
+            cursor: default;
+            border-radius: $border-radius-20;
+        }
+        &::-webkit-scrollbar-track{
+            background-color: $color-light-grey;
+            cursor: default;
+            border-radius: $border-radius-20;
+        }
+    }
+
+    &__button {
+        margin: 0 auto;
+        padding: 10px 15px;
+        background-color: $color-blue-dark;
+        color: $color-white-static;
+        border: $border-0;
+        @include fluid-text(20, 16);
+        font-weight: 800;
+        transition: all 300ms;
+    }
+    &__button:hover{
+        background-color: $color-red;
+        @include media-tablet-768 {
+            background-color: $color-blue-dark
+        }
+    }
+    &__button:active{
+        background-color: $color-red;
+        scale: 0.75;
+    }
+}
