@@ -10,7 +10,7 @@
 <body>
     <header class="header">
         <div class="header__inner">
-            <div class="header__wrapper">
+            <div class="header__wrapper header__wrapper_animation-scrolling-header">
                 <div class="header__logo">
                     <a href="index.html" class="header__logo-name">Михаил Семёнов</a>
                 </div>
@@ -196,9 +196,27 @@
             </div>
         </section>
     </main>
+    <script src="js/checkDataDevice.js"></script>
     <script src="js/burgerMenu.js"></script>
     <script src="js/scroll.js"></script>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // setTimeout(() => {
+                // console.log('tyt')
+                console.log(window)
 
+            if(window.jscd.os === 'iOS') {
+                let header = document.querySelector('.header__wrapper_animation-scrolling-header')
+                header.classList.remove('header__wrapper_animation-scrolling-header')
+            }
+            
+            // }, 1000)
+            
+        })
+    </script>
+
+    
 
 </body>
 </html>

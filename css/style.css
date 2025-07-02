@@ -60,12 +60,13 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.header__wrapper_animation-scrolling-header {
   animation-name: scrolling-header;
   animation-timing-function: linear;
   animation-fill-mode: both;
-  background-color: rgb(255, 0, 136);
   animation-range: 10vh 20vh;
-  animation-timeline: scroll() !important;
+  animation-timeline: scroll();
 }
 .header__logo-name {
   font-weight: 500;
