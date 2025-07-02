@@ -26,7 +26,6 @@ body {
   font-weight: 300;
   padding: 0;
   background-color: white;
-  border: 2px solid red;
 }
 
 a {
@@ -63,7 +62,7 @@ a {
   animation-name: scrolling-header;
   animation-fill-mode: both;
   animation-timeline: scroll();
-  background-color: rgb(106, 255, 0);
+  background-color: rgb(251, 239, 10);
 }
 .header__logo-name {
   font-weight: 500;
@@ -352,9 +351,9 @@ a {
 }
 
 .section__inner {
-  border: 1px solid red;
   max-width: 1400px;
   margin: auto;
+  padding-bottom: 1px;
 }
 .section__wrapper {
   margin: 24px;
