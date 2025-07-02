@@ -3,7 +3,31 @@
 
 $max-Width-For-Show-Burger-Menu: 858px;
 
+@keyframes scrolling-header {
+    
+    0% {
+        // box-shadow: 0px 5px 15px 0px $color-black;
+    }
+
+    // 20% {
+    //     height: 70px;
+    //     border-top-left-radius: 0;
+    //     border-top-right-radius: 0;
+    // }
+    
+    100%{
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        height: 70px;
+        box-shadow: 0px 5px 15px 0px $color-black;
+    }
+}
+
 .header {
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
 
     &__inner {
         // border: 1px solid green;
@@ -21,6 +45,13 @@ $max-Width-For-Show-Burger-Menu: 858px;
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        animation-name: scrolling-header;
+        // animation-timing-function: linear;
+        animation-fill-mode: both;
+        animation-timeline: scroll();
+        animation-range: 24px 100px;
+        
     }
 
     &__logo {
@@ -55,13 +86,9 @@ $max-Width-For-Show-Burger-Menu: 858px;
             // font-size: $font-size-56;
             position: relative;
             
-            &-a:active {
-                // @include media-tablet-768 {
-                    color: $color-blue-dark;
-                    // font-size: 800;
-                    // font-weight: bold;
-                // }
-            }
+            // &-a {
+            //     position: relative;
+            // }
             &-a::after {
                 content: '';
                 position: absolute;
@@ -78,6 +105,14 @@ $max-Width-For-Show-Burger-Menu: 858px;
                     width: 0;
                 }
             }
+            &-a:hover {
+                @include media($max-Width-For-Show-Burger-Menu) {
+                    color: $color-blue-dark;
+                }
+            }
+            &-a:active {
+                color: $color-blue-dark;
+            }
 
 
         }
@@ -86,8 +121,9 @@ $max-Width-For-Show-Burger-Menu: 858px;
         @include media($max-Width-For-Show-Burger-Menu) {
             @include hidden();
             position: absolute;
-            top: 45%;
+            top: 250%;
             left: 50%;
+            // bottom: -100%;
             transform: translate(-50%, -50%);
             display: block;
             text-align: center;
@@ -101,7 +137,8 @@ $max-Width-For-Show-Burger-Menu: 858px;
         @include media($max-Width-For-Show-Burger-Menu) {
             @include hidden();
             position: absolute;
-            top: 80%;
+            // top: 80%;
+            top: 380%;
             left: 50%;
             transform: translate(-50%, -50%);
             display: block;
@@ -145,11 +182,13 @@ $max-Width-For-Show-Burger-Menu: 858px;
             // box-shadow: inset 5px 5px 5px 5px red,inset -5px -5px 5px 5px red;
 
             position: absolute;
+            
             top: 0;
             left: 0;
-            opacity: 1.0;
-            width: 100vw;
-            height: 100vh;
+            
+            opacity: 1;
+            width: 99vw;
+            height: 95vh;
             background-color: $color-blue;
             z-index: 50;
             // overflow: hidden;
