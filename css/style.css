@@ -63,7 +63,7 @@ a {
   animation-name: scrolling-header;
   animation-fill-mode: both;
   animation-timeline: scroll();
-  animation-range: 24px 124px;
+  animation-range: 100px 200px;
 }
 .header__logo-name {
   font-weight: 500;
