@@ -5,14 +5,9 @@ $max-Width-For-Show-Burger-Menu: 858px;
 
 @keyframes scrolling-header {
     
-    0% {
-        // box-shadow: 0px 5px 15px 0px $color-black;
-    }
 
-    // 20% {
-    //     height: 70px;
-    //     border-top-left-radius: 0;
-    //     border-top-right-radius: 0;
+    // 1% {
+    //     box-shadow: 0px 5px 15px 0px $color-black;
     // }
     
     100%{
@@ -28,11 +23,13 @@ $max-Width-For-Show-Burger-Menu: 858px;
     position: sticky;
     top: 0;
     z-index: 100;
+    
 
     &__inner {
         // border: 1px solid green;
         max-width: 1400px;
         margin: auto;
+        
     }
 
     &__wrapper{
@@ -52,6 +49,7 @@ $max-Width-For-Show-Burger-Menu: 858px;
         animation-timeline: scroll();
         $animation-top-value: 100px; 
         animation-range: $animation-top-value $animation-top-value+100px;
+        
         
     }
 
