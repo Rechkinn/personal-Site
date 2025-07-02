@@ -62,7 +62,8 @@ a {
   animation-name: scrolling-header;
   animation-fill-mode: both;
   animation-timeline: scroll();
-  background-color: rgb(251, 239, 10);
+  background-color: rgb(255, 0, 225);
+  animation-range-end: 20vh;
 }
 .header__logo-name {
   font-weight: 500;
