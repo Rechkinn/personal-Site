@@ -64,7 +64,6 @@ a {
   animation-fill-mode: both;
   animation-timeline: scroll();
   background-color: red;
-  animation-range: 300px 400px;
 }
 .header__logo-name {
   font-weight: 500;
