@@ -3,17 +3,22 @@
 
 $max-Width-For-Show-Burger-Menu: 858px;
 
+@mixin change-header {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    height: 70px;
+    box-shadow: 0px 5px 15px 0px $color-black; 
+    backdrop-filter: blur(10px);
+    // background-color: rgba(204, 204, 204, 0.3);
+    // background-color: rgb(127, 144, 215, 0.3);
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
 @keyframes scrolling-header {
     
-    // 1% {
-    //     box-shadow: 0px 5px 15px 0px $color-black;
-    // }
 
     100%{
-        border-top-left-radius: 0;
-        border-top-right-radius: 0;
-        height: 70px;
-        box-shadow: 0px 5px 15px 0px $color-black;
+        @include change-header;
     }
 }
 
@@ -41,16 +46,25 @@ $max-Width-For-Show-Burger-Menu: 858px;
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        transition: all 600ms;
         
         &_animation-scrolling-header {
             animation-name: scrolling-header;
             animation-timing-function: linear;
             animation-fill-mode: both;
-            animation-range: 10vh 20vh;
+            animation-range: 3vh 13vh;
             animation-timeline: scroll();
             // 
         }
-         
+        
+        &_animation-scrolling-header-alt {
+            @include change-header;
+        }
+
+        // &_hidden-box-shadow {
+        //     box-shadow: 0px -5px 15px 0px $color-blue;
+        // }
 
     }
 
@@ -128,6 +142,11 @@ $max-Width-For-Show-Burger-Menu: 858px;
             display: block;
             text-align: center;
             z-index: 100;
+            // height: 
+            @include media-max-height(391px) {
+                top: 150%;
+            }
+
         }
 
     }
@@ -138,12 +157,15 @@ $max-Width-For-Show-Burger-Menu: 858px;
             @include hidden();
             position: absolute;
             // top: 80%;
-            top: 380%;
+            top: 450%;
             left: 50%;
             transform: translate(-50%, -50%);
             display: block;
             text-align: center;
             z-index: 100;
+            @include media-max-height(391px) {
+                top: 295%;
+            }
         }
     }
 
@@ -177,7 +199,10 @@ $max-Width-For-Show-Burger-Menu: 858px;
     &__burger-modal-window{
         // @include hidden();
         // @include media-tablet-768 {
+        // box-shadow: 0px -5px 15px 0px $color-blue;
         @include media($max-Width-For-Show-Burger-Menu) {
+
+            
 
             // box-shadow: inset 5px 5px 5px 5px red,inset -5px -5px 5px 5px red;
 
@@ -188,10 +213,13 @@ $max-Width-For-Show-Burger-Menu: 858px;
             
             opacity: 1;
             width: 99vw;
-            height: 95vh;
+            height: 100vh;
             background-color: $color-blue;
             z-index: 50;
             // overflow: hidden;
+
+            
+
         }
     }
     

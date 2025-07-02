@@ -45,6 +45,11 @@ $width-desctop-1280: 1280px;
         @content;
     }
 }
+@mixin media-max-height($max-height) {
+    @media (max-height: $max-height) {
+        @content;
+    }
+}
 
 @mixin hover() {
     @media (any-hover: hover) {

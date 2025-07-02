@@ -10,7 +10,7 @@
 <body>
     <header class="header">
         <div class="header__inner">
-            <div class="header__wrapper header__wrapper_animation-scrolling-header">
+            <div class="header__wrapper header__wrapper_animation-scrolling-header header__wrapper_hidden-box-shadow">
                 <div class="header__logo">
                     <a href="index.html" class="header__logo-name">Михаил Семёнов</a>
                 </div>
@@ -205,11 +205,34 @@
             console.log(window)
 
             if(window.jscd.os === 'iOS') {
-                let header = document.querySelector('.header__wrapper_animation-scrolling-header')
-                header.classList.remove('header__wrapper_animation-scrolling-header')
+                let headerWrapper = document.querySelector('.header__wrapper_animation-scrolling-header')
+                headerWrapper.classList.remove('header__wrapper_animation-scrolling-header')
+
+                let header = document.querySelector('header');
+                window.addEventListener("scroll", () => {
+                    if(header.offsetTop <= 40) {
+                        headerWrapper.classList.remove('header__wrapper_animation-scrolling-header-alt')
+                    }
+                    else {
+                        headerWrapper.classList.add('header__wrapper_animation-scrolling-header-alt')
+                    }
+                })
             }
             
-            
+            // let header = document.querySelector('header');
+            // let wrapper = document.querySelector('.header__wrapper');
+            // console.log('qwe');
+            // console.log(wrapper);
+            //  console.log(elem);
+            // window.addEventListener("scroll", () => {
+                // console.log('qwe2');
+                // console.log('clientTop', elem.clientTop);
+                // console.log('header', header.offsetTop);
+                // console.log('wrapper', wrapper.offsetTop);
+                // console.log('scrollTop', elem.scrollTop);
+                // console.log(elem)
+            // });
+
         })
     </script>
 
