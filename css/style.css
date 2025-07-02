@@ -63,6 +63,7 @@ a {
   animation-name: scrolling-header;
   animation-timing-function: linear;
   animation-fill-mode: both;
+  background-color: rgb(17, 255, 0);
   animation-range: 10vh 20vh;
   animation-timeline: scroll();
 }
