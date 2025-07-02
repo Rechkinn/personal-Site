@@ -61,11 +61,9 @@ a {
   align-items: center;
   animation-name: scrolling-header;
   animation-fill-mode: both;
-  -webkit-animation-timeline: scroll();
-  -moz-animation-timeline: scroll();
-  animation-timeline: scroll();
-  background-color: rgb(255, 0, 225);
+  background-color: rgb(0, 204, 255);
   animation-range-end: 20vh;
+  animation-timeline: scroll();
 }
 .header__logo-name {
   font-weight: 500;

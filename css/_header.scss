@@ -45,14 +45,12 @@ $max-Width-For-Show-Burger-Menu: 858px;
         animation-name: scrolling-header;
         // animation-timing-function: linear;
         animation-fill-mode: both;
-        -webkit-animation-timeline: scroll();
-        -moz-animation-timeline: scroll();
-        animation-timeline: scroll();
+        
         $animation-top-value: 20vh; 
-        background-color: rgb(255, 0, 225);
+        background-color: rgb(0, 204, 255);
         // animation-range: $animation-top-value $animation-top-value + 10vh;
         animation-range-end: $animation-top-value;
-        
+        animation-timeline: scroll();
 
     }
 
