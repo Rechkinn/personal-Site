@@ -46,7 +46,7 @@ a{
 
 
 .body_overflow-hidden {
-    @include media-tablet-768 {
+    @include media($max-Width-For-Show-Burger-Menu) {
         overflow: hidden;
         background-color: $color-blue;
     }

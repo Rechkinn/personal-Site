@@ -1,6 +1,8 @@
 @import 'mixins';
 @import 'media';
 
+$max-Width-For-Show-Burger-Menu: 858px;
+
 .header {
 
     &__inner {
@@ -41,7 +43,10 @@
             // margin-right: $margin-x-48;
             @include fluid-margin-right(48, 8);
 
-            @include media-tablet-768 {
+            // @include media-tablet-768 {
+            //     margin: 0 0 $margin-x-24 0
+            // }
+            @include media($max-Width-For-Show-Burger-Menu) {
                 margin: 0 0 $margin-x-24 0
             }
         }
@@ -77,7 +82,8 @@
 
         }
 
-        @include media-tablet-768 {
+        // @include media-tablet-768 {
+        @include media($max-Width-For-Show-Burger-Menu) {
             @include hidden();
             position: absolute;
             top: 45%;
@@ -91,10 +97,11 @@
     }
 
     &__switch{
-        @include media-tablet-768 {
+        // @include media-tablet-768 {
+        @include media($max-Width-For-Show-Burger-Menu) {
             @include hidden();
             position: absolute;
-            top: 72%;
+            top: 80%;
             left: 50%;
             transform: translate(-50%, -50%);
             display: block;
@@ -113,7 +120,8 @@
         visibility: hidden;
         opacity: 0;
         z-index: 100;
-        @include media-tablet-768 {
+        // @include media-tablet-768 {
+        @include media($max-Width-For-Show-Burger-Menu) {
             position: relative;
             visibility: visible;
             opacity: 1;
@@ -131,13 +139,14 @@
     
     &__burger-modal-window{
         // @include hidden();
-        @include media-tablet-768 {
+        // @include media-tablet-768 {
+        @include media($max-Width-For-Show-Burger-Menu) {
             position: absolute;
             top: 0;
             left: 0;
             opacity: 1.0;
             width: 100vw;
-            height: 100vh;
+            height: 1000vh;
             background-color: $color-blue;
             z-index: 50;
             // overflow: hidden;
