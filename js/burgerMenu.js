@@ -27,16 +27,22 @@ document.addEventListener("DOMContentLoaded", () => {
             // может открыться модалка
             if(modalWindow.classList.contains('hidden')) {
                 // 'Модалка скрыта, main должен показываться'
+                
                 main.classList.remove('hidden');
+                main.classList.remove('position-absolute');
             }
             else {
                 // 'Модалка открыта, main скрыт'
+                
                 main.classList.add('hidden');
+                main.classList.add('position-absolute');
             }
         }
         else {
             // main всегда открыт
+            
             main.classList.remove('hidden');
+            main.classList.remove('position-absolute');
         }
     }, 15)
 })

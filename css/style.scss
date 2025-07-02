@@ -13,7 +13,7 @@ body{
     font-weight: 300;
     padding: 0;
     background-color: $color-white;
-    border: 1px solid red;
+    border: 15px solid red;
     
 
     // overflow: hidden;
@@ -49,6 +49,8 @@ a{
     @include media($max-Width-For-Show-Burger-Menu) {
         overflow: hidden;
         background-color: $color-blue;
+        // background-color: greenyellow;
+        // position: relative;
     }
 }
 
@@ -56,6 +58,11 @@ a{
     opacity: 0;
     scale: 0;
     visibility: hidden;
+}
+.position-absolute {
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 // .position-absolute{
 //     @include media-tablet-768 {

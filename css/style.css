@@ -26,7 +26,7 @@ body {
   font-weight: 300;
   padding: 0;
   background-color: white;
-  border: 1px solid red;
+  border: 15px solid red;
 }
 
 a {
@@ -131,7 +131,6 @@ a {
 }
 @media (max-width: 858px) {
   .header__burger-modal-window {
-    box-shadow: inset 5px 5px 5px 5px red, inset -5px -5px 5px 5px red;
     position: absolute;
     top: 0;
     left: 0;
@@ -860,6 +859,12 @@ a {
   opacity: 0;
   scale: 0;
   visibility: hidden;
+}
+
+.position-absolute {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .show {
