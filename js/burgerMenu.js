@@ -1,4 +1,5 @@
 function openCloseModalWindow() {
+
     let modalWindow = document.querySelector('.header__burger-modal-window');
     let menu = document.querySelector('.header__list');
     let switchCustom = document.querySelector('.switch');
@@ -13,8 +14,29 @@ function openCloseModalWindow() {
 
     let body = document.querySelector('body');
     body.classList.toggle('body_overflow-hidden');
-    // let main = document.querySelector('main');
-    // main.classList.toggle('hidden');
-    // main.classList.toggle('position-absolute');
-
 }
+
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    let modalWindow = document.querySelector('.header__burger-modal-window');
+    let main = document.querySelector('.main');
+
+    setInterval(() => {
+        if(window.innerWidth <= 857) {
+            // может открыться модалка
+            if(modalWindow.classList.contains('hidden')) {
+                // 'Модалка скрыта, main должен показываться'
+                main.classList.remove('hidden');
+            }
+            else {
+                // 'Модалка открыта, main скрыт'
+                main.classList.add('hidden');
+            }
+        }
+        else {
+            // main всегда открыт
+            main.classList.remove('hidden');
+        }
+    }, 15)
+})
