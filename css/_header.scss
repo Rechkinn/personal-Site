@@ -141,6 +141,9 @@ $max-Width-For-Show-Burger-Menu: 858px;
         // @include hidden();
         // @include media-tablet-768 {
         @include media($max-Width-For-Show-Burger-Menu) {
+
+            box-shadow: inset 5px 5px 5px 5px red,inset -5px -5px 5px 5px red;
+
             position: absolute;
             top: 0;
             left: 0;

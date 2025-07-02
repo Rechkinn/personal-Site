@@ -131,6 +131,7 @@ a {
 }
 @media (max-width: 858px) {
   .header__burger-modal-window {
+    box-shadow: inset 5px 5px 5px 5px red, inset -5px -5px 5px 5px red;
     position: absolute;
     top: 0;
     left: 0;
