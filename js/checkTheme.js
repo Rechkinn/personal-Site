@@ -33,12 +33,12 @@ document.addEventListener("DOMContentLoaded", () => {
         })
     }
 
-    let body = document.querySelector('body');
+    let html = document.querySelector('html');
     if(localStorage.getItem('theme') === 'dark') {
-        body.classList.add('dark-theme');
+        html.classList.add('dark-theme');
     }
     else {
-        body.classList.remove('dark-theme');
+        html.classList.remove('dark-theme');
     }
 
     let headerSwitch = document.querySelector('.header__switch');
