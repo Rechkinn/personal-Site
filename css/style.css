@@ -27,7 +27,6 @@ body {
   padding: 0;
   background-color: white;
 }
-
 a {
   text-decoration: none;
   color: black;
@@ -182,7 +181,7 @@ a {
     top: 0;
     left: 0;
     opacity: 1;
-    width: 99vw;
+    width: 100vw;
     height: 100vh;
     background-color: #7F90D7;
     z-index: 50;
