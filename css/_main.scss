@@ -1,12 +1,11 @@
 @import 'variables';
 @import 'mixins';
 @import 'media';
-@import 'animation';
 
 
 @mixin photo-description {
     padding: 0 15px;
-    background-color: $color-white;
+    background-color: var(--color-white);
     width: 100%;
     height: 100%;
     text-align: center;
@@ -44,9 +43,10 @@
     }
 
     &__wrapper>:nth-child(n){
-        background-color: $color-blue;
+        background-color: var(--color-blue);
         border-radius: $border-radius-20;
-        @include use-full-column
+        @include use-full-column;
+        transition: all 600ms;
     }
 
 
@@ -115,18 +115,18 @@
             }
 
             &__button {
-                background-color: $color-white;
+                background-color: var(--color-white);
                 border: $border-0;
                 width: 100%;
                 height: 100%;
                 border-radius: 50%;
-                background-image: url($url-arrow);
+                background-image: var(--url-arrow);
                 background-position: center;
                 background-size: cover;
                 background-repeat: no-repeat;
             }
             &__button:active {
-                background-color: $color-blue-dark;
+                background-color: var(--color-blue-dark);
             }
         }
         & .sticky-scroll:hover .sticky-scroll__arrow {
@@ -319,7 +319,7 @@
             height: 100%;
             // overflow-x: hidden;
 
-            $animation-Duration: 0.55s;
+            // $animation-Duration: 0.55s;
 
             @include media-tablet-768 {
                 // display: flex;
@@ -346,7 +346,7 @@
             }
 
             &-description {
-                transition: all 500ms ease-in-out $animation-Duration*1.5;
+                // transition: all 500ms ease-in-out $animation-Duration*1.5;
                 padding: 0 $padding-x-15;
 
                 
@@ -358,20 +358,20 @@
                 &-a{
                     @include fluid-text($font-size-16, $font-size-16);
                     font-weight: 800;
-                    background-color: $color-blue-dark;
+                    background-color: var(--color-blue-dark);
                     padding: 7.5px;
                     border-radius: 10px;
-                    color: $color-button-text;
+                    color: var(--color-white);
                     transition: all 300ms;
                 }
                 &-a:hover{
-                    background-color: $color-red;
+                    background-color: $color-red-static;
                     @include media-tablet-768 {
-                        background-color: $color-blue-dark
+                        background-color: var(--color-blue-dark);
                     }
                 }
                 &-a:active{
-                    background-color: $color-red;
+                    background-color: $color-red-static;
                     scale: 0.75;
                 }
             }
@@ -500,6 +500,7 @@
                 
             }
             &__button {
+                color: var(--color-white);
                 @include media-tablet-768 {
                     grid-column: 1 / -1;
                 }

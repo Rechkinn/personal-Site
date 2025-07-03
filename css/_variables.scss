@@ -7,28 +7,19 @@ $font-size-56: 56;
 
 // $min-width: 360;
 // $max-width: 1400;
+
+
 $color-white-static: white;
-
-$color-shadow-icon: #222;
-
-$color-white: white;
-$color-black: black;
-$color-blue: #7F90D7;
-// $color-blue: #3b3b3b;
-$color-blue-dark: blue;
-$color-red: red;
-$color-light-grey: #ccc;
-
+$color-red-static: red;
+$color-shadow-icon-static: #222;
+$color-light-grey-static: #ccc;
 
 $color-button-transparent: transparent;
-$color-button-text: white;
 
 $border-0: 0;
-
 $border-radius-20: 20px;
 
 $gap: 24px;
-
 
 $padding-x-15: 15px;
 $padding-y-5: 5px;
@@ -41,6 +32,24 @@ $margin-x-48: 48px;
 
 $margin-y-24: 24px;
 
-// $color-arrow: 'white';
-$color-arrow: 'black';
-$url-arrow: '../img/arrow-left-#{$color-arrow}.png';
+
+:root {
+    --color-white: white;
+    --color-black: black;
+    --color-blue: #7F90D7;
+    --color-blue-dark: blue;
+    --color-header-scrolling: rgba(174, 174, 174, 0.5);
+    --value-header-box-shadow: 0px 5px 15px 0px var(--color-black);
+    --url-arrow: url(../img/arrow-left-black.png);
+}
+
+
+.dark-theme {
+    --color-white: black;
+    --color-black: white;
+    --color-blue: #3f3f3f;
+    --color-blue-dark: orange;
+    --color-header-scrolling: rgba(62, 62, 62, 0.5);
+    --value-header-box-shadow: 0px 1px 10px 0px var(--color-black);
+    --url-arrow: url(../img/arrow-left-white.png);
+}

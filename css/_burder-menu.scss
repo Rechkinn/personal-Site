@@ -35,7 +35,7 @@ $top-Difference: 35%;
         display: inline-block;
         width: $width-Button;
         height: $height-Span;
-        background-color: $color-black;
+        background-color: var(--color-black);
         border-radius: $border-radius-20;
         transition: all 300ms;
     }

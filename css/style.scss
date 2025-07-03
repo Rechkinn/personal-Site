@@ -1,5 +1,6 @@
-@import 'font';
 @import 'variables';
+@import 'font';
+
 @import 'mixins';
 
 *{
@@ -11,20 +12,16 @@ body{
     @include fluid-text($font-size-25, $font-size-16);
     font-weight: 300;
     padding: 0;
-    // background-color: aquamarine;
-    @include media-min-width($width-desctop-1280 + 1) {
-        // height: 100vh;
-    }
+    background-color: var(--color-white);
+    color: var(--color-black);
     // border: 1px solid red;
+    transition: all 600ms;
 }
-
-
-
 
 
 a{
     text-decoration: none;
-    color: black;
+    color: var(--color-black);
 }
 
 @import 'header';
@@ -39,7 +36,7 @@ a{
 .body_overflow-hidden {
     @include media($max-Width-For-Show-Burger-Menu) {
         overflow: hidden;
-        background-color: $color-blue;
+        background-color: var(--color-blue);
     }
 }
 

@@ -45,6 +45,7 @@
                         <form action="" method="" class="switch__form">
                             <label for="theme" class="switch__label">
                                 <input type="checkbox" id="theme" class="switch__original">
+                                
                                 <div class="switch__custom">
                                     <div class="switch__custom-name">светлый</div>
                                     <div class="switch__custom-name">тёмный</div>
@@ -60,9 +61,7 @@
                         </button>
                         
                     </div>
-                    <!-- <div class="header__burger-modal-window hidden"></div> -->
                 </div>
-                <!-- <div class="header__burger-modal-window hidden"></div> -->
             </div>
         </div>
         <div class="header__burger-modal-window hidden">
@@ -91,8 +90,8 @@
                         </li>
                         <li class="header__burger-modal-window-list-item switch">
                             <form action="" method="" class="switch__form">
-                                <label for="theme" class="switch__label">
-                                    <input type="checkbox" id="theme" class="switch__original">
+                                <label for="theme2" class="switch__label">
+                                    <input type="checkbox" id="theme2" class="switch__original">
                                     <div class="switch__custom">
                                         <div class="switch__custom-name">светлый</div>
                                         <div class="switch__custom-name">тёмный</div>
@@ -237,34 +236,11 @@
         </section>
     </main>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            console.log(window)
-
-            // if(window.jscd.os === 'iOS') {
-                let headerWrapper = document.querySelector('.header__wrapper')
-                // headerWrapper.classList.remove('header__wrapper_animation-scrolling-header')
-
-                let header = document.querySelector('header');
-                window.addEventListener("scroll", () => {
-                    if(header.offsetTop <= 40) {
-                        headerWrapper.classList.remove('header__wrapper_animation-scrolling-header-alt')
-                    }
-                    else {
-                        headerWrapper.classList.add('header__wrapper_animation-scrolling-header-alt')
-                    }
-                })
-            // }
-        })
-    </script>
-
+    <script src="js/checkTheme.js"></script>
+    <script src="js/animation-effect-scrolling-header.js"></script>
     <script src="js/checkDataDevice.js"></script>
     <script src="js/burgerMenu.js"></script>
     <script src="js/scroll.js"></script>
     
-    
-
-    
-
 </body>
 </html>
