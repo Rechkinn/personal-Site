@@ -87,7 +87,6 @@ body {
   padding: 0;
   background-color: var(--color-white);
   color: var(--color-black);
-  transition: all 600ms;
 }
 
 a {
@@ -731,7 +730,6 @@ a {
 .section__wrapper > :nth-child(n) {
   background-color: var(--color-blue);
   border-radius: 20px;
-  transition: all 600ms;
 }
 @media (max-width: 768px) {
   .section__wrapper > :nth-child(n) {
