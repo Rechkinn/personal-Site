@@ -56,7 +56,7 @@ a {
   margin: 24px 24px;
   padding: 0 24px;
   height: 100px;
-  background-color: rgb(192, 222, 198);
+  background-color: rgb(222, 192, 210);
   border-radius: 20px;
   display: flex;
   justify-content: space-between;
@@ -167,7 +167,7 @@ a {
     opacity: 1;
     width: 100vw;
     height: 100vh;
-    background-color: blue;
+    background-color: #7F90D7;
     z-index: 100;
   }
 }
@@ -185,7 +185,7 @@ a {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -70%);
     text-align: center;
   }
   .header__burger-modal-window-list-item:not(:last-child) {
