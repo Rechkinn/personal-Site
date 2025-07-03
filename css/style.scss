@@ -11,7 +11,7 @@ body{
     @include fluid-text($font-size-25, $font-size-16);
     font-weight: 300;
     padding: 0;
-    background-color: $color-white;
+    background-color: aquamarine;
     @include media-min-width($width-desctop-1280 + 1) {
         // height: 100vh;
     }
