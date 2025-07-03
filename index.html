@@ -10,7 +10,7 @@
 <body>
     <header class="header">
         <div class="header__inner">
-            <div class="header__wrapper header__wrapper_animation-scrolling-header header__wrapper_hidden-box-shadow">
+            <div class="header__wrapper ">
                 <div class="header__logo">
                     <a href="index.html" class="header__logo-name">Михаил Семёнов</a>
                 </div>
@@ -103,17 +103,6 @@
                     </ul>
                 </nav>
             </div>
-            <!-- <div class="header__burger-modal-window-switch switch">
-                <form action="" method="" class="switch__form">
-                    <label for="theme" class="switch__label">
-                        <input type="checkbox" id="theme" class="switch__original">
-                        <div class="switch__custom">
-                            <div class="switch__custom-name">светлый</div>
-                            <div class="switch__custom-name">тёмный</div>
-                        </div>
-                    </label>
-                </form>
-            </div> -->
         </div>
     </header>
     <main class="main">
@@ -252,9 +241,9 @@
         document.addEventListener("DOMContentLoaded", () => {
             console.log(window)
 
-            if(window.jscd.os === 'iOS') {
-                let headerWrapper = document.querySelector('.header__wrapper_animation-scrolling-header')
-                headerWrapper.classList.remove('header__wrapper_animation-scrolling-header')
+            // if(window.jscd.os === 'iOS') {
+                let headerWrapper = document.querySelector('.header__wrapper')
+                // headerWrapper.classList.remove('header__wrapper_animation-scrolling-header')
 
                 let header = document.querySelector('header');
                 window.addEventListener("scroll", () => {
@@ -265,7 +254,7 @@
                         headerWrapper.classList.add('header__wrapper_animation-scrolling-header-alt')
                     }
                 })
-            }
+            // }
         })
     </script>
 
