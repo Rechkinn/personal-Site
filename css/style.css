@@ -25,7 +25,6 @@ body {
   font-size: clamp(1rem, 0.8052884615rem + 0.8653846154vw, 1.5625rem);
   font-weight: 300;
   padding: 0;
-  background-color: aquamarine;
 }
 a {
   text-decoration: none;
