@@ -173,6 +173,7 @@ $max-Width-For-Show-Burger-Menu: 858px;
     &__burger-modal-window{
         // @include hidden();
         // @include media-tablet-768 {
+        transition: all 600ms;
         position: absolute;
         top: 0;
         left: 0;
@@ -203,6 +204,27 @@ $max-Width-For-Show-Burger-Menu: 858px;
                 &-item:not(:last-child) {
                     margin: 0 0 12px 0;
                 }
+                &-item {
+                    &-a {
+                        position: relative;
+                    }
+                    &-a::after {
+                        content: '';
+                        position: absolute;
+                        bottom: 0;
+                        width: 0;
+                        height: 2px;
+                        background-color: var(--color-blue-dark);
+                        transition: all 300ms;
+                    }
+                    &-a:hover::after {
+                        width: 100%;
+                    }
+                    &-a:active {
+                        color: var(--color-blue-dark);
+                    }
+                }
+
             }
 
         }

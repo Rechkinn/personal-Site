@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     function changeTheme(element) {
-        let body = document.querySelector('body');
+        let html = document.querySelector('html');
         let inputChecked = element.querySelector('.switch__original');
 
         if(localStorage.getItem('theme') === 'dark') {
@@ -17,12 +17,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
             if(localStorage.getItem('theme') === 'dark') {
                 localStorage.setItem('theme', 'light')
-                body.classList.remove('dark-theme');
+                html.classList.remove('dark-theme');
                 checked = false;
             }
             else {
                 localStorage.setItem('theme', 'dark')
-                body.classList.add('dark-theme');
+                html.classList.add('dark-theme');
                 checked = true;
             }
 
