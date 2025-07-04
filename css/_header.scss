@@ -65,6 +65,7 @@ $max-Width-For-Show-Burger-Menu: 858px;
         // margin-left: $margin-x-24;
         &-name {
             font-weight: 500;
+            transition: all 600ms;
         }
     }
     &__buttons {
@@ -93,9 +94,9 @@ $max-Width-For-Show-Burger-Menu: 858px;
             // font-size: $font-size-56;
             position: relative;
             
-            // &-a {
-            //     position: relative;
-            // }
+            &-a {
+                transition: all 600ms;
+            }
             &-a::after {
                 content: '';
                 position: absolute;
@@ -207,6 +208,7 @@ $max-Width-For-Show-Burger-Menu: 858px;
                 &-item {
                     &-a {
                         position: relative;
+                        transition: all 600ms;
                     }
                     &-a::after {
                         content: '';

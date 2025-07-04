@@ -7,6 +7,8 @@
     box-sizing: border-box;
 }
 
+
+
 body{
     font-family: 'Gilroy', sans-serif;
     @include fluid-text($font-size-25, $font-size-16);
