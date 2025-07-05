@@ -18,13 +18,16 @@
         user-select: none;
         transition: all 300ms;
     }
+
     &__name-input:focus, &__email-input:focus, &__message-textarea:focus {
         box-shadow: inset 0px 0px 7px 0px var(--color-blue-dark);
         border-color: var(--color-blue-dark);
     }
+
     &__name-input::placeholder, &__email-input::placeholder, &__message-textarea::placeholder {
         color: $color-light-grey-static;
     }
+
     &__message-textarea {
         resize: none;
         height: 300px;
@@ -54,12 +57,14 @@
         font-weight: 800;
         transition: all 300ms;
     }
+
     &__button:hover{
         background-color: $color-red-static;
         @include media-tablet-768 {
             background-color: var(--color-blue-dark);
         }
     }
+    
     &__button:active{
         background-color: $color-red-static;
         scale: 0.75;

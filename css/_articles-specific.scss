@@ -7,6 +7,7 @@
         max-width: 1400px;
         margin: auto;
     }
+    
     &__wrapper{
         margin: $margin-x-48 $margin-x-24 $margin-x-24 $margin-x-24;
     }
@@ -15,6 +16,7 @@
         margin-bottom: $margin-x-24;
         text-align: center;
     }
+
     &__text:not(:last-child) {
         margin-bottom: $margin-x-24;
         text-align: justify;
