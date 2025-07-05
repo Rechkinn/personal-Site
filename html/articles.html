@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Проекты</title>
+    <link rel="icon" href="../img/icon.png">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header__inner">
+            <div class="header__wrapper ">
+                <div class="header__logo">
+                    <a href="../index.html" class="header__logo-name">Михаил Семёнов</a>
+                </div>
+                <div class="header__buttons">
+                    <nav class="header__menu">
+                        <ul class="header__list">
+                            <li class="header__list-item">
+                                <a href="../index.html" class="header__list-item-a">
+                                    Главная
+                                </a>
+                            </li>
+                            <li class="header__list-item">
+                                <a href="articles.html" class="header__list-item-a">
+                                    Статьи
+                                </a>
+                            </li>
+                            <li class="header__list-item">
+                                <a href="projects.html" class="header__list-item-a">
+                                    Проекты
+                                </a>
+                            </li>
+                            <li class="header__list-item">
+                                <a href="certificates.html" class="header__list-item-a">
+                                    Сертификаты
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="header__switch-and-burger">
+                    <div class="header__switch switch">
+                        <form action="" method="" class="switch__form">
+                            <label for="theme" class="switch__label">
+                                <input type="checkbox" id="theme" class="switch__original">
+                                
+                                <div class="switch__custom">
+                                    <div class="switch__custom-name">светлый</div>
+                                    <div class="switch__custom-name">тёмный</div>
+                                </div>
+                            </label>
+                        </form>
+                    </div>
+                    <div class="header__burger">
+                        <button class="header__burger-button burger-menu" onclick="openCloseModalWindow()">
+                            <span class="burger-menu__span"></span>
+                            <span class="burger-menu__span"></span>
+                            <span class="burger-menu__span"></span>
+                        </button>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__burger-modal-window hidden">
+            <div class="header__burger-modal-window-buttons">
+                <nav class="header__burger-modal-window-menu">
+                    <ul class="header__burger-modal-window-list">
+                        <li class="header__burger-modal-window-list-item">
+                            <a href="../index.html" class="header__burger-modal-window-list-item-a">
+                                Главная
+                            </a>
+                        </li>
+                        <li class="header__burger-modal-window-list-item">
+                            <a href="articles.html" class="header__burger-modal-window-list-item-a">
+                                Статьи
+                            </a>
+                        </li>
+                        <li class="header__burger-modal-window-list-item">
+                            <a href="projects.html" class="header__burger-modal-window-list-item-a">
+                                Проекты
+                            </a>
+                        </li>
+                        <li class="header__burger-modal-window-list-item">
+                            <a href="certificates.html" class="header__burger-modal-window-list-item-a">
+                                Сертификаты
+                            </a>
+                        </li>
+                        <li class="header__burger-modal-window-list-item switch">
+                            <form action="" method="" class="switch__form">
+                                <label for="theme2" class="switch__label">
+                                    <input type="checkbox" id="theme2" class="switch__original">
+                                    <div class="switch__custom">
+                                        <div class="switch__custom-name">светлый</div>
+                                        <div class="switch__custom-name">тёмный</div>
+                                    </div>
+                                </label>
+                            </form>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <section class="articles">
+            <div class="articles__inner">
+                <div class="articles__wrapper">
+                    <h1 class="articles__title">Статьи</h1>
+                    <div class="articles__body">
+                        <div class="articles__item">
+                            <a href="articles-1.html" class="articles__a">
+                                <span class="articles__number">1.</span>
+                                <span class="articles__text">
+                                    Томское предприятие в тренде цифровизации.
+                                </span>
+                            </a>
+                        </div>
+                        <div class="articles__item">
+                            <a href="articles-2.html" class="articles__a">
+                                <span class="articles__number">2.</span>
+                                <span class="articles__text">
+                                    «Томская Электронная Компания» внедрила около тридцати решений в сфере цифровизации бизнеса.
+                                </span>
+                            </a>
+                        </div>
+                        <div class="articles__item">
+                            <a href="articles-3.html" class="articles__a">
+                                <span class="articles__number">3.</span>
+                                <span class="articles__text">
+                                    Softline и Microsoft заключили соглашение Enterprise Agreement с ООО НПП ТЭК.
+                                </span>
+                            </a>
+                        </div>
+                        <div class="articles__item">
+                            <a href="articles-4.html" class="articles__a">
+                                <span class="articles__number">
+                                    4.
+                                </span>
+                                <span class="articles__text">
+                                    НПП «Томская электронная компания» и «Утилекс АйТи» подводят итоги первого этапа внедрения ERP-системы.
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="../js/checkTheme.js"></script>
+    <script src="../js/animation-effect-scrolling-header.js"></script>
+    <script src="../js/checkDataDevice.js"></script>
+    <script src="../js/burgerMenu.js"></script>
+    <!-- <script src="../js/scroll.js"></script> -->
+    
+</body>
+</html>

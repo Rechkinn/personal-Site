@@ -20,12 +20,10 @@
         user-select: none;
         position: relative;
         @include fluid-text($font-size-16, $font-size-16);
-        // font-size: $font-size-16;
         padding: $padding-switch;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        // background-color: rgb(127, 144, 215);
         $different-Color: 40;
         $opacity-Custom: 0.7;
         border: 1px solid var(--color-black);
@@ -41,7 +39,6 @@
         background-color: var(--color-black);
         content: '';
         width: calc($switch-Width/2);
-        // height: calc($switch-Height/1.2);
         height: $switch-Height;
         border-radius: $border-radius-20;
         transition: all 600ms;
@@ -51,12 +48,4 @@
         left: calc($switch-Width/2) - 1px;
         transition: all 600ms;
     }
-
-    // @include media-tablet-768 {
-    //     width: 0;
-    //     opacity: 0;
-    //     scale: 0;
-    //     visibility: hidden;
-    // }
-
 }

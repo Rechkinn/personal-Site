@@ -1,0 +1,35 @@
+
+
+
+.articles-specific {
+
+    &__inner {
+        max-width: 1400px;
+        margin: auto;
+    }
+    &__wrapper{
+        margin: $margin-x-48 $margin-x-24 $margin-x-24 $margin-x-24;
+    }
+
+    &__title {
+        margin-bottom: $margin-x-24;
+        text-align: center;
+    }
+    &__text:not(:last-child) {
+        margin-bottom: $margin-x-24;
+        text-align: justify;
+        font-style: italic;
+        padding: 0 $padding-x-24;
+    }
+
+    &__data {
+        display: block;
+        text-align: right;
+    }
+
+    &__back {
+        color: $color-red-static;
+        text-decoration: underline;
+    }
+
+}

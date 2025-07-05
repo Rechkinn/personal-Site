@@ -1,8 +1,6 @@
 @import 'variables';
 
 
-
-
 .sticky-scroll {
 
     display: flex;
@@ -31,7 +29,6 @@
         scroll-snap-align: start;
         scroll-snap-stop: always;
         flex-shrink: 0;
-        // height: 100%;
         align-items: center;
     }
 
@@ -46,9 +43,11 @@
         display: flex;
         justify-content: center;
     }
+    
     &__circle:not(:last-child) {
         margin-right: 10px;
     }
+
     &__circle {
         width: 10px;
         height: 10px;
@@ -59,8 +58,4 @@
             background-color: var(--color-blue-dark);
         }
     }
-
-
 }
-
-

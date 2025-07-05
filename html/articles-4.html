@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Проекты</title>
+    <link rel="icon" href="../img/icon.png">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header__inner">
+            <div class="header__wrapper ">
+                <div class="header__logo">
+                    <a href="../index.html" class="header__logo-name">Михаил Семёнов</a>
+                </div>
+                <div class="header__buttons">
+                    <nav class="header__menu">
+                        <ul class="header__list">
+                            <li class="header__list-item">
+                                <a href="../index.html" class="header__list-item-a">
+                                    Главная
+                                </a>
+                            </li>
+                            <li class="header__list-item">
+                                <a href="articles.html" class="header__list-item-a">
+                                    Статьи
+                                </a>
+                            </li>
+                            <li class="header__list-item">
+                                <a href="projects.html" class="header__list-item-a">
+                                    Проекты
+                                </a>
+                            </li>
+                            <li class="header__list-item">
+                                <a href="certificates.html" class="header__list-item-a">
+                                    Сертификаты
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="header__switch-and-burger">
+                    <div class="header__switch switch">
+                        <form action="" method="" class="switch__form">
+                            <label for="theme" class="switch__label">
+                                <input type="checkbox" id="theme" class="switch__original">
+                                
+                                <div class="switch__custom">
+                                    <div class="switch__custom-name">светлый</div>
+                                    <div class="switch__custom-name">тёмный</div>
+                                </div>
+                            </label>
+                        </form>
+                    </div>
+                    <div class="header__burger">
+                        <button class="header__burger-button burger-menu" onclick="openCloseModalWindow()">
+                            <span class="burger-menu__span"></span>
+                            <span class="burger-menu__span"></span>
+                            <span class="burger-menu__span"></span>
+                        </button>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__burger-modal-window hidden">
+            <div class="header__burger-modal-window-buttons">
+                <nav class="header__burger-modal-window-menu">
+                    <ul class="header__burger-modal-window-list">
+                        <li class="header__burger-modal-window-list-item">
+                            <a href="../index.html" class="header__burger-modal-window-list-item-a">
+                                Главная
+                            </a>
+                        </li>
+                        <li class="header__burger-modal-window-list-item">
+                            <a href="articles.html" class="header__burger-modal-window-list-item-a">
+                                Статьи
+                            </a>
+                        </li>
+                        <li class="header__burger-modal-window-list-item">
+                            <a href="projects.html" class="header__burger-modal-window-list-item-a">
+                                Проекты
+                            </a>
+                        </li>
+                        <li class="header__burger-modal-window-list-item">
+                            <a href="certificates.html" class="header__burger-modal-window-list-item-a">
+                                Сертификаты
+                            </a>
+                        </li>
+                        <li class="header__burger-modal-window-list-item switch">
+                            <form action="" method="" class="switch__form">
+                                <label for="theme2" class="switch__label">
+                                    <input type="checkbox" id="theme2" class="switch__original">
+                                    <div class="switch__custom">
+                                        <div class="switch__custom-name">светлый</div>
+                                        <div class="switch__custom-name">тёмный</div>
+                                    </div>
+                                </label>
+                            </form>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <section class="articles-specific">
+            <div class="articles-specific__inner">
+                <div class="articles-specific__wrapper">
+                    <h2 class="articles-specific__title">НПП «Томская электронная компания» и «Утилекс АйТи» подводят итоги первого этапа внедрения ERP-системы</h2>
+                    <p class="articles-specific__text">Научно-производственное предприятие «Томская Электронная Компания» и Компания «Утилекс АйТи», российский поставщик услуг в области ИТ и консалтинга, завершили первый этап внедрения системы управления предприятием на базе Microsoft Dynamics AX.</p>
+                    <p class="articles-specific__text">В результате первого этапа внедрения решена задача автоматизации процессов учета и планирования  материальных ресурсов компании для разработки новых продуктов, серийной продукции и проектной деятельности. За счет регистрации в системе отделом маркетинга клиентских заявок, формирования коммерческих предложений и ведения клиентской базы, а отделом материально-технического снабжения заказов поставщикам,  повысилась эффективность планирования ресурсов. Производственно-диспетчерский отдел получил инструмент для оперативного расчета потребностей в полуфабрикатах на основании заказов на продукцию и автоматического создания производственных заказов.</p>
+                    <p class="articles-specific__text">В ходе проекта специалисты «Утилекс АйТи» реализовали ряд модификаций для упрощения и оптимизации работы сотрудников НПП «ТЭК». Был разработан механизм составления отчетов, позволяющих осуществлять контроль деятельности подразделений компании: автоматическое формирование журналов комплектации под производственные заказы, формирование платежей поставщикам на основании счетов, расчет плановых калькуляций и т.д. Для снижения количества ошибок в результате многократного ввода данных, система Microsoft Dynamics AX интегрирована с системами электронного документооборота DocsVision и «Банк-Клиент», частично с системой бухгалтерского учета «1С». ERP-система стала дополнительным катализатором для оптимизации существующих бизнес-процессов и решения ряда организационных вопросов на предприятии.</p>
+                    <p class="articles-specific__text">В настоящий момент, подразделения компании, включенные в границы проекта, работают в едином информационном пространстве: используют единые справочники поставщиков и клиентов, работают с единым реестром производственных заказов. Внедрение ERP-системы послужило толчком для создания единой системы нормативно-справочной информации в компании, и сейчас ведется работа в этом направлении.</p>
+                    <p class="articles-specific__text">Михаил Семенов, руководитель проекта со стороны НПП «ТЭК», делится: «Специалисты компании, не охваченные проектом, увидели значительные отличия возможностей новой системы от существующих. В связи с этим рамки проекта расширились за счет активного включения подразделений, чья работа напрямую связана с производством, а также проектных отделов и сервисной службы. В итоге во внедрении была задействована большая группа сотрудников нашей компании, что послужило увеличению числа ключевых пользователей системы. Качество управления операционной деятельностью и информационное взаимодействие между подразделениями заметно улучшилось после первого этапа внедрения и следующий шаг — продолжить автоматизацию управления проектами в ERP-системе, поскольку на сегодняшний день для этого используются другие программные продукты Microsoft».</p>
+                    <p class="articles-specific__text">Елена Кошкарова, руководитель проекта со стороны компании «Утилекс АйТи», комментирует:  «Microsoft Dynamics AX с одной стороны — платформа, предоставляющая дополнительные возможности дальнейшего расширения и реализации особенностей производства компании. С другой стороны, в ней собраны лучшие мировые бизнес-практики, помогающие оперативно принимать обоснованные управленческие решения. Именно эти факторы обусловили выбор томского предприятия и позволили выполнить поставленные на первом этапе внедрения задачи и заложить фундамент для последующих этапов».</p>
+                    
+                    <data value="" class="articles-specific__data">27.02.2009</data>
+                    <div>
+                        <a href="articles.html" class="articles-specific__back">&larr; Вернуться назад</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="../js/checkTheme.js"></script>
+    <script src="../js/animation-effect-scrolling-header.js"></script>
+    <script src="../js/checkDataDevice.js"></script>
+    <script src="../js/burgerMenu.js"></script>
+    <!-- <script src="../js/scroll.js"></script> -->
+    
+</body>
+</html>

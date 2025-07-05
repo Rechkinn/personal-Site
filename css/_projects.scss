@@ -1,0 +1,48 @@
+
+
+.projects {
+    &__inner {
+        max-width: 1400px;
+        margin: auto;
+    }
+
+    &__wrapper {
+        margin: $margin-x-48 $margin-x-24 $margin-x-24 $margin-x-24;
+    }
+
+    &__wrapper .stand {
+
+        &__body {
+            @include media-desctop-1400 {
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(3, 1fr);
+            }
+            @include media-tablet-768 {
+                grid-template-columns: repeat(1, 1fr);
+                grid-template-rows: repeat(6, 1fr);
+            }
+        }
+
+        &__item {
+
+            background-color: var(--color-blue);
+            
+            &-img {
+
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+
+                max-height: 250px;
+                @include media-phone-480 {
+                    max-height: 150px;
+                }
+            }
+
+            &-name {
+                color: var(--color-black);
+                padding: 2.5px 5px;
+            }
+        }
+    }
+}

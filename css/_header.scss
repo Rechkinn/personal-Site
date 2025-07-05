@@ -24,9 +24,7 @@ $max-Width-For-Show-Burger-Menu: 858px;
     top: 0;
     z-index: 50;
     
-
     &__inner {
-        // border: 1px solid green;
         max-width: 1400px;
         margin: auto;
         
@@ -35,10 +33,8 @@ $max-Width-For-Show-Burger-Menu: 858px;
     &__wrapper{
         margin: $margin-y-24 $margin-x-24;
         padding: 0 $padding-x-24;
-        // max-width: 1400px;
         height: 100px;
         background-color: var(--color-blue);
-        // background-color: rgb(25, 243, 50);
         border-radius: $border-radius-20;
         display: flex;
         justify-content: space-between;
@@ -57,41 +53,26 @@ $max-Width-For-Show-Burger-Menu: 858px;
         &_animation-scrolling-header-alt {
             @include change-header;
         }
-
-
     }
 
     &__logo {
-        // margin-left: $margin-x-24;
         &-name {
             font-weight: 500;
             transition: all 600ms;
         }
     }
-    &__buttons {
-        @include media-tablet-768 {
-            // @include show()
-        }
-    }
-
-
+    
     &__list {
         display: flex;
 
         &-item:not(:last-child) {
-            // margin-right: $margin-x-48;
             @include fluid-margin-right(48, 8);
-
-            // @include media-tablet-768 {
-            //     margin: 0 0 $margin-x-24 0
-            // }
             @include media($max-Width-For-Show-Burger-Menu) {
                 margin: 0 0 $margin-x-24 0
             }
         }
         &-item {
             @include fluid-text($font-size-16, $font-size-16);
-            // font-size: $font-size-56;
             position: relative;
             
             &-a {
@@ -121,8 +102,6 @@ $max-Width-For-Show-Burger-Menu: 858px;
             &-a:active {
                 color: var(--color-blue-dark);
             }
-
-
         }
 
         @include media($max-Width-For-Show-Burger-Menu) {
@@ -131,7 +110,6 @@ $max-Width-For-Show-Burger-Menu: 858px;
             top: 0;
             left: 0;
         }
-
     }
 
     &__switch{
@@ -143,53 +121,31 @@ $max-Width-For-Show-Burger-Menu: 858px;
         }
     }
 
-    &__switch-and-burger{
-        // height: 100%;
-    }
-
     &__burger {
         line-height: 1;
         position: absolute;
         visibility: hidden;
         opacity: 0;
         z-index: 400;
-        // @include media-tablet-768 {
         @include media($max-Width-For-Show-Burger-Menu) {
             position: relative;
             visibility: visible;
             opacity: 1;
         }
 
-        &-button{
-            // height: 100%;
-            // position: absolute;
-            // z-index: 1000;
-            // left: 0;
-            // top: 50%;
-            // transform: translate(-50%, -50%);
-        }
-
     }
     
     &__burger-modal-window{
-        // @include hidden();
-        // @include media-tablet-768 {
         transition: all 600ms;
         position: absolute;
         top: 0;
         left: 0;
         @include media($max-Width-For-Show-Burger-Menu) {
-
-            
-            // position: absolute;
-            // top: 0;
-            // left: 0;
             opacity: 1;
             width: 100vw;
             height: 100vh;
             background-color: var(--color-blue);
             z-index: 100;
-            // overflow: hidden;
         }
         &-list {
             position: absolute;
@@ -226,13 +182,7 @@ $max-Width-For-Show-Burger-Menu: 858px;
                         color: var(--color-blue-dark);
                     }
                 }
-
             }
-
         }
-
-
-        
     }
-    
 }

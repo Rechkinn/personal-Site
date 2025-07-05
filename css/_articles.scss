@@ -1,0 +1,41 @@
+
+
+.articles {
+
+
+
+    &__inner {
+        max-width: 1400px;
+        margin: auto;
+    }
+
+    &__wrapper{
+        margin: $margin-x-48 $margin-x-24 $margin-x-24 $margin-x-24;
+    }
+
+    &__title {
+        @include fluid-text(56, 25);
+        margin-bottom: $margin-x-24;
+    }
+
+    &__item {
+        @include fluid-text(25, 16);
+        margin-bottom: $margin-x-15;
+        padding-left: $padding-x-48;
+    }
+    
+    &__text:active {
+        text-decoration: underline;
+        color: var(--color-blue-dark);
+    }
+    &__text:hover {
+        text-decoration: underline;
+        color: var(--color-blue-dark);
+    }
+
+    &__number{
+        display: block;
+        margin-right: $margin-x-15;
+    }
+
+}

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Проекты</title>
+    <link rel="icon" href="../img/icon.png">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header__inner">
+            <div class="header__wrapper ">
+                <div class="header__logo">
+                    <a href="../index.html" class="header__logo-name">Михаил Семёнов</a>
+                </div>
+                <div class="header__buttons">
+                    <nav class="header__menu">
+                        <ul class="header__list">
+                            <li class="header__list-item">
+                                <a href="../index.html" class="header__list-item-a">
+                                    Главная
+                                </a>
+                            </li>
+                            <li class="header__list-item">
+                                <a href="articles.html" class="header__list-item-a">
+                                    Статьи
+                                </a>
+                            </li>
+                            <li class="header__list-item">
+                                <a href="projects.html" class="header__list-item-a">
+                                    Проекты
+                                </a>
+                            </li>
+                            <li class="header__list-item">
+                                <a href="certificates.html" class="header__list-item-a">
+                                    Сертификаты
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="header__switch-and-burger">
+                    <div class="header__switch switch">
+                        <form action="" method="" class="switch__form">
+                            <label for="theme" class="switch__label">
+                                <input type="checkbox" id="theme" class="switch__original">
+                                
+                                <div class="switch__custom">
+                                    <div class="switch__custom-name">светлый</div>
+                                    <div class="switch__custom-name">тёмный</div>
+                                </div>
+                            </label>
+                        </form>
+                    </div>
+                    <div class="header__burger">
+                        <button class="header__burger-button burger-menu" onclick="openCloseModalWindow()">
+                            <span class="burger-menu__span"></span>
+                            <span class="burger-menu__span"></span>
+                            <span class="burger-menu__span"></span>
+                        </button>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__burger-modal-window hidden">
+            <div class="header__burger-modal-window-buttons">
+                <nav class="header__burger-modal-window-menu">
+                    <ul class="header__burger-modal-window-list">
+                        <li class="header__burger-modal-window-list-item">
+                            <a href="../index.html" class="header__burger-modal-window-list-item-a">
+                                Главная
+                            </a>
+                        </li>
+                        <li class="header__burger-modal-window-list-item">
+                            <a href="articles.html" class="header__burger-modal-window-list-item-a">
+                                Статьи
+                            </a>
+                        </li>
+                        <li class="header__burger-modal-window-list-item">
+                            <a href="projects.html" class="header__burger-modal-window-list-item-a">
+                                Проекты
+                            </a>
+                        </li>
+                        <li class="header__burger-modal-window-list-item">
+                            <a href="certificates.html" class="header__burger-modal-window-list-item-a">
+                                Сертификаты
+                            </a>
+                        </li>
+                        <li class="header__burger-modal-window-list-item switch">
+                            <form action="" method="" class="switch__form">
+                                <label for="theme2" class="switch__label">
+                                    <input type="checkbox" id="theme2" class="switch__original">
+                                    <div class="switch__custom">
+                                        <div class="switch__custom-name">светлый</div>
+                                        <div class="switch__custom-name">тёмный</div>
+                                    </div>
+                                </label>
+                            </form>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <section class="articles-specific">
+            <div class="articles-specific__inner">
+                <div class="articles-specific__wrapper">
+                    <h2 class="articles-specific__title">«Томская Электронная Компания» внедрила около тридцати решений в сфере цифровизации бизнеса</h2>
+                    <p class="articles-specific__text">Как следует из сообщения НПП «Томская электронная компания», специалисты отдела информационно-технического обеспечения предприятия используют около 30 систем электронной отчетности и различных цифровых сервисов. Отмечается, что цифровизация затронула метрологическое обеспечение, финансовый блок, работу с тендерами, взаимодействие с заказчиками и поставщиками и другие процессы внутри компании.</p>
+                    <p class="articles-specific__text">В частности, предприятие одним из первых внедрило систему, основанную на технологии сотовой связи VoLTE – благодаря ей работник может одновременно получать данные с компьютера и голосовую информацию из другого производственного участка. В настоящее время НПП «ТЭК» ведет активную работу по взаимодействию с сотовыми операторами и ускорению внедрения технологии 5G.</p>
+                    <p class="articles-specific__text">«В 2020 году совместно с Томским политехническим университетом и с использованием оборудования и ПО компаний «Мегафон» в НПП ТЭК началась реализация проекта по созданию «умного цеха» на базе интернета вещей, работающего с использованием технологий NB-IoT и систем технического зрения. Работы ведутся в целях улучшения результатов и контроля качества производимой продукции», – говорится в сообщении компании.</p>
+                    <p class="articles-specific__text">Предприятие использует электронный документооборот, функционирующий на базе отечественного ПО DocsVision. В ближайших планах значится внедрение электронного архива, используемого в конструкторской деятельности – а именно в процессах доработки, запуска серийного продукта и т.д. Кроме того, компанией приобретен сервер, который позволит создавать электронно-цифровые подписи (ЭЦП) сотрудников без привлечения сторонних организаций.</p>
+                    <p class="articles-specific__text">– В краткосрочной перспективе компания планирует увеличить количество сотрудников, работающих с программным PLM-комплексом SolidWorks, помогающим управлять жизненным циклом изделия. Нам необходимо ускорить развертывание рабочих мест PDM (системы управления данными об изделии – ред.) на производстве для более оперативного получения актуальных данных и оптимизации бизнес-процессов. Прорабатываются вопросы по автоматизации рабочих мест с использованием самых современных аппаратных и программных решений. Рассматриваются различные варианты внедрения MES (системы управления производством – ред.) и их дальнейшей интеграции с 1C:ЕRP. Кроме того, ведется проект по внедрению новой версии системы электронного документооборота, проводятся мероприятия по модернизации программного и аппаратного обеспечения на производстве с использованием самых современных решений, – рассказал начальник отдела информационно-технического обеспечения Михаил Семёнов.</p>
+                    
+                    <data value="" class="articles-specific__data">4.03.2022</data>
+                    <div>
+                        <a href="articles.html" class="articles-specific__back">&larr; Вернуться назад</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="../js/checkTheme.js"></script>
+    <script src="../js/animation-effect-scrolling-header.js"></script>
+    <script src="../js/checkDataDevice.js"></script>
+    <script src="../js/burgerMenu.js"></script>
+    <!-- <script src="../js/scroll.js"></script> -->
+    
+</body>
+</html>
