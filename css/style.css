@@ -5,7 +5,7 @@
   --color-blue-dark: blue;
   --color-header-scrolling: rgba(174, 174, 174, 0.5);
   --value-header-box-shadow: 0px 5px 15px 0px var(--color-black);
-  --url-arrow: url(/img/index/arrow-left-black.png);
+  --url-arrow: url(../img/index/arrow-left-black.png);
 }
 
 .dark-theme {
@@ -15,7 +15,7 @@
   --color-blue-dark: orange;
   --color-header-scrolling: rgba(62, 62, 62, 0.5);
   --value-header-box-shadow: 0px 1px 10px 0px var(--color-black);
-  --url-arrow: url(/img/index/arrow-left-white.png);
+  --url-arrow: url(../img/index/arrow-left-white.png);
 }
 
 @font-face {
@@ -43,7 +43,7 @@
   --color-blue-dark: blue;
   --color-header-scrolling: rgba(174, 174, 174, 0.5);
   --value-header-box-shadow: 0px 5px 15px 0px var(--color-black);
-  --url-arrow: url(/img/index/arrow-left-black.png);
+  --url-arrow: url(../img/index/arrow-left-black.png);
 }
 
 .dark-theme {
@@ -53,7 +53,7 @@
   --color-blue-dark: orange;
   --color-header-scrolling: rgba(62, 62, 62, 0.5);
   --value-header-box-shadow: 0px 1px 10px 0px var(--color-black);
-  --url-arrow: url(/img/index/arrow-left-white.png);
+  --url-arrow: url(../img/index/arrow-left-white.png);
 }
 
 :root {
@@ -63,7 +63,7 @@
   --color-blue-dark: blue;
   --color-header-scrolling: rgba(174, 174, 174, 0.5);
   --value-header-box-shadow: 0px 5px 15px 0px var(--color-black);
-  --url-arrow: url(/img/index/arrow-left-black.png);
+  --url-arrow: url(../img/index/arrow-left-black.png);
 }
 
 .dark-theme {
@@ -73,7 +73,7 @@
   --color-blue-dark: orange;
   --color-header-scrolling: rgba(62, 62, 62, 0.5);
   --value-header-box-shadow: 0px 1px 10px 0px var(--color-black);
-  --url-arrow: url(/img/index/arrow-left-white.png);
+  --url-arrow: url(../img/index/arrow-left-white.png);
 }
 
 * {
@@ -103,7 +103,7 @@ a {
   --color-blue-dark: blue;
   --color-header-scrolling: rgba(174, 174, 174, 0.5);
   --value-header-box-shadow: 0px 5px 15px 0px var(--color-black);
-  --url-arrow: url(/img/index/arrow-left-black.png);
+  --url-arrow: url(../img/index/arrow-left-black.png);
 }
 
 .dark-theme {
@@ -113,7 +113,7 @@ a {
   --color-blue-dark: orange;
   --color-header-scrolling: rgba(62, 62, 62, 0.5);
   --value-header-box-shadow: 0px 1px 10px 0px var(--color-black);
-  --url-arrow: url(/img/index/arrow-left-white.png);
+  --url-arrow: url(../img/index/arrow-left-white.png);
 }
 
 :root {
@@ -123,7 +123,7 @@ a {
   --color-blue-dark: blue;
   --color-header-scrolling: rgba(174, 174, 174, 0.5);
   --value-header-box-shadow: 0px 5px 15px 0px var(--color-black);
-  --url-arrow: url(/img/index/arrow-left-black.png);
+  --url-arrow: url(../img/index/arrow-left-black.png);
 }
 
 .dark-theme {
@@ -133,7 +133,7 @@ a {
   --color-blue-dark: orange;
   --color-header-scrolling: rgba(62, 62, 62, 0.5);
   --value-header-box-shadow: 0px 1px 10px 0px var(--color-black);
-  --url-arrow: url(/img/index/arrow-left-white.png);
+  --url-arrow: url(../img/index/arrow-left-white.png);
 }
 
 :root {
@@ -143,7 +143,7 @@ a {
   --color-blue-dark: blue;
   --color-header-scrolling: rgba(174, 174, 174, 0.5);
   --value-header-box-shadow: 0px 5px 15px 0px var(--color-black);
-  --url-arrow: url(/img/index/arrow-left-black.png);
+  --url-arrow: url(../img/index/arrow-left-black.png);
 }
 
 .dark-theme {
@@ -153,7 +153,7 @@ a {
   --color-blue-dark: orange;
   --color-header-scrolling: rgba(62, 62, 62, 0.5);
   --value-header-box-shadow: 0px 1px 10px 0px var(--color-black);
-  --url-arrow: url(/img/index/arrow-left-white.png);
+  --url-arrow: url(../img/index/arrow-left-white.png);
 }
 
 .header {
@@ -330,7 +330,7 @@ a {
   --color-blue-dark: blue;
   --color-header-scrolling: rgba(174, 174, 174, 0.5);
   --value-header-box-shadow: 0px 5px 15px 0px var(--color-black);
-  --url-arrow: url(/img/index/arrow-left-black.png);
+  --url-arrow: url(../img/index/arrow-left-black.png);
 }
 
 .dark-theme {
@@ -340,7 +340,7 @@ a {
   --color-blue-dark: orange;
   --color-header-scrolling: rgba(62, 62, 62, 0.5);
   --value-header-box-shadow: 0px 1px 10px 0px var(--color-black);
-  --url-arrow: url(/img/index/arrow-left-white.png);
+  --url-arrow: url(../img/index/arrow-left-white.png);
 }
 
 :root {
@@ -350,7 +350,7 @@ a {
   --color-blue-dark: blue;
   --color-header-scrolling: rgba(174, 174, 174, 0.5);
   --value-header-box-shadow: 0px 5px 15px 0px var(--color-black);
-  --url-arrow: url(/img/index/arrow-left-black.png);
+  --url-arrow: url(../img/index/arrow-left-black.png);
 }
 
 .dark-theme {
@@ -360,7 +360,7 @@ a {
   --color-blue-dark: orange;
   --color-header-scrolling: rgba(62, 62, 62, 0.5);
   --value-header-box-shadow: 0px 1px 10px 0px var(--color-black);
-  --url-arrow: url(/img/index/arrow-left-white.png);
+  --url-arrow: url(../img/index/arrow-left-white.png);
 }
 
 :root {
@@ -370,7 +370,7 @@ a {
   --color-blue-dark: blue;
   --color-header-scrolling: rgba(174, 174, 174, 0.5);
   --value-header-box-shadow: 0px 5px 15px 0px var(--color-black);
-  --url-arrow: url(/img/index/arrow-left-black.png);
+  --url-arrow: url(../img/index/arrow-left-black.png);
 }
 
 .dark-theme {
@@ -380,7 +380,7 @@ a {
   --color-blue-dark: orange;
   --color-header-scrolling: rgba(62, 62, 62, 0.5);
   --value-header-box-shadow: 0px 1px 10px 0px var(--color-black);
-  --url-arrow: url(/img/index/arrow-left-white.png);
+  --url-arrow: url(../img/index/arrow-left-white.png);
 }
 
 .switch__original {
@@ -428,7 +428,7 @@ a {
   --color-blue-dark: blue;
   --color-header-scrolling: rgba(174, 174, 174, 0.5);
   --value-header-box-shadow: 0px 5px 15px 0px var(--color-black);
-  --url-arrow: url(/img/index/arrow-left-black.png);
+  --url-arrow: url(../img/index/arrow-left-black.png);
 }
 
 .dark-theme {
@@ -438,7 +438,7 @@ a {
   --color-blue-dark: orange;
   --color-header-scrolling: rgba(62, 62, 62, 0.5);
   --value-header-box-shadow: 0px 1px 10px 0px var(--color-black);
-  --url-arrow: url(/img/index/arrow-left-white.png);
+  --url-arrow: url(../img/index/arrow-left-white.png);
 }
 
 :root {
@@ -448,7 +448,7 @@ a {
   --color-blue-dark: blue;
   --color-header-scrolling: rgba(174, 174, 174, 0.5);
   --value-header-box-shadow: 0px 5px 15px 0px var(--color-black);
-  --url-arrow: url(/img/index/arrow-left-black.png);
+  --url-arrow: url(../img/index/arrow-left-black.png);
 }
 
 .dark-theme {
@@ -458,7 +458,7 @@ a {
   --color-blue-dark: orange;
   --color-header-scrolling: rgba(62, 62, 62, 0.5);
   --value-header-box-shadow: 0px 1px 10px 0px var(--color-black);
-  --url-arrow: url(/img/index/arrow-left-white.png);
+  --url-arrow: url(../img/index/arrow-left-white.png);
 }
 
 .burger-menu {
@@ -507,7 +507,7 @@ a {
   --color-blue-dark: blue;
   --color-header-scrolling: rgba(174, 174, 174, 0.5);
   --value-header-box-shadow: 0px 5px 15px 0px var(--color-black);
-  --url-arrow: url(/img/index/arrow-left-black.png);
+  --url-arrow: url(../img/index/arrow-left-black.png);
 }
 
 .dark-theme {
@@ -517,7 +517,7 @@ a {
   --color-blue-dark: orange;
   --color-header-scrolling: rgba(62, 62, 62, 0.5);
   --value-header-box-shadow: 0px 1px 10px 0px var(--color-black);
-  --url-arrow: url(/img/index/arrow-left-white.png);
+  --url-arrow: url(../img/index/arrow-left-white.png);
 }
 
 .form {
@@ -616,7 +616,7 @@ a {
   --color-blue-dark: blue;
   --color-header-scrolling: rgba(174, 174, 174, 0.5);
   --value-header-box-shadow: 0px 5px 15px 0px var(--color-black);
-  --url-arrow: url(/img/index/arrow-left-black.png);
+  --url-arrow: url(../img/index/arrow-left-black.png);
 }
 
 .dark-theme {
@@ -626,7 +626,7 @@ a {
   --color-blue-dark: orange;
   --color-header-scrolling: rgba(62, 62, 62, 0.5);
   --value-header-box-shadow: 0px 1px 10px 0px var(--color-black);
-  --url-arrow: url(/img/index/arrow-left-white.png);
+  --url-arrow: url(../img/index/arrow-left-white.png);
 }
 
 .sticky-scroll {
@@ -679,7 +679,7 @@ a {
   --color-blue-dark: blue;
   --color-header-scrolling: rgba(174, 174, 174, 0.5);
   --value-header-box-shadow: 0px 5px 15px 0px var(--color-black);
-  --url-arrow: url(/img/index/arrow-left-black.png);
+  --url-arrow: url(../img/index/arrow-left-black.png);
 }
 
 .dark-theme {
@@ -689,7 +689,7 @@ a {
   --color-blue-dark: orange;
   --color-header-scrolling: rgba(62, 62, 62, 0.5);
   --value-header-box-shadow: 0px 1px 10px 0px var(--color-black);
-  --url-arrow: url(/img/index/arrow-left-white.png);
+  --url-arrow: url(../img/index/arrow-left-white.png);
 }
 
 :root {
@@ -699,7 +699,7 @@ a {
   --color-blue-dark: blue;
   --color-header-scrolling: rgba(174, 174, 174, 0.5);
   --value-header-box-shadow: 0px 5px 15px 0px var(--color-black);
-  --url-arrow: url(/img/index/arrow-left-black.png);
+  --url-arrow: url(../img/index/arrow-left-black.png);
 }
 
 .dark-theme {
@@ -709,7 +709,7 @@ a {
   --color-blue-dark: orange;
   --color-header-scrolling: rgba(62, 62, 62, 0.5);
   --value-header-box-shadow: 0px 1px 10px 0px var(--color-black);
-  --url-arrow: url(/img/index/arrow-left-white.png);
+  --url-arrow: url(../img/index/arrow-left-white.png);
 }
 
 :root {
@@ -719,7 +719,7 @@ a {
   --color-blue-dark: blue;
   --color-header-scrolling: rgba(174, 174, 174, 0.5);
   --value-header-box-shadow: 0px 5px 15px 0px var(--color-black);
-  --url-arrow: url(/img/index/arrow-left-black.png);
+  --url-arrow: url(../img/index/arrow-left-black.png);
 }
 
 .dark-theme {
@@ -729,7 +729,7 @@ a {
   --color-blue-dark: orange;
   --color-header-scrolling: rgba(62, 62, 62, 0.5);
   --value-header-box-shadow: 0px 1px 10px 0px var(--color-black);
-  --url-arrow: url(/img/index/arrow-left-white.png);
+  --url-arrow: url(../img/index/arrow-left-white.png);
 }
 
 :root {
@@ -739,7 +739,7 @@ a {
   --color-blue-dark: blue;
   --color-header-scrolling: rgba(174, 174, 174, 0.5);
   --value-header-box-shadow: 0px 5px 15px 0px var(--color-black);
-  --url-arrow: url(/img/index/arrow-left-black.png);
+  --url-arrow: url(../img/index/arrow-left-black.png);
 }
 
 .dark-theme {
@@ -749,7 +749,7 @@ a {
   --color-blue-dark: orange;
   --color-header-scrolling: rgba(62, 62, 62, 0.5);
   --value-header-box-shadow: 0px 1px 10px 0px var(--color-black);
-  --url-arrow: url(/img/index/arrow-left-white.png);
+  --url-arrow: url(../img/index/arrow-left-white.png);
 }
 
 .section__inner {
@@ -881,7 +881,7 @@ a {
 }
 .section__photo {
   position: relative;
-  background-image: url(/img/index/Worker.png);
+  background-image: url(../img/index/Worker.png);
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: contain;
